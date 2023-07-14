@@ -7,7 +7,7 @@ import imgProfile from "../../../../src/assets/imgs/imgProfile.jpg";
 
 const AboutMe = () => {
     return ( 
-        <AboutMeSection>
+        <AboutMeSection id='about-me'>
 
             <AboutMeArea>
                 <AboutMeImgArea>

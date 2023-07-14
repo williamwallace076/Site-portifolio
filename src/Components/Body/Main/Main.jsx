@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 import {faSquareJs,faReact,faHtml5, faCss3Alt, faSass, faGithub} from "@fortawesome/free-brands-svg-icons";
-
+import { Link } from 'react-scroll';
 
 
 const Main = () => {
@@ -18,7 +18,9 @@ const Main = () => {
 
         
                 <ButonArea>
-                    <button>Meus Projetos</button>
+                    <Link to='projects' spy={true} smooth={true} offset={50} duration={1000}  >
+                        <button >Meus Projetos</button>
+                    </Link>
                     <a href="https://github.com/williamwallace076">
                         <button>
                             <span>Meu Repositório</span>
@@ -42,7 +44,9 @@ const Main = () => {
                 </Tecnologies>
             </ImgProfileArea>
             
-            <FontAwesomeIcon className='arrow' icon={faChevronDown} size="2xl" style={{color: "#b4b4b4",}} />
+            <Link to='about-me' spy={true} smooth={true} offset={10} duration={1000}>
+                <FontAwesomeIcon className='arrow' icon={faChevronDown} size="2xl" style={{color: "#b4b4b4",}} />
+            </Link>
             </ProfileContainer>
         </section>
      );

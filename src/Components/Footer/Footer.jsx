@@ -11,8 +11,8 @@ const Footer = () => {
         <FooterArea>
            <div>
                 <FooterSosialIcons>
-                        <FontAwesomeIcon icon={faLinkedin} size="xl" />
-                        <FontAwesomeIcon icon={faGithub}  size="xl"/>
+                        <FontAwesomeIcon className='icon-footer' icon={faLinkedin} size="xl" />
+                        <FontAwesomeIcon className='icon-footer'icon={faGithub}  size="xl"/>
                 </FooterSosialIcons>
            </div>
            <div>

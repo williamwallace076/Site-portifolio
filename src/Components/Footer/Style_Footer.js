@@ -22,6 +22,15 @@ flex-direction: row;
 gap: 1rem;
 align-items: center;
 
+.icon-footer{
+transition: 0.2s;
+}
+
+.icon-footer:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
 `
 export const FooterParagraph = styles.p`
 

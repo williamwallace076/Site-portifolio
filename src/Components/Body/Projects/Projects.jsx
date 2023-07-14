@@ -17,7 +17,7 @@ import {faSquareJs,faReact,faHtml5, faCss3Alt, faSass, faGithub} from "@fortawes
 
 const Projects = () => {
     return ( 
-        <ProjectsSection>
+        <ProjectsSection id= "projects">
             <h2>Projetos</h2>
 
             <ProjectsGrid>
@@ -43,7 +43,8 @@ const Projects = () => {
 
                 <ProjectItem classname="mid" title="List de Tarefas" subtitle="Gerenciamento de tarefas pessoais"
                  link="https://todolist-seven-delta.vercel.app/" thumbnail={thumbTodolist} tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs} ></ProjectItem>
-                <ProjectItem classname="mid" title="Seleção de personagem" subtitle="Menu de seleção de personagem Marvel"
+               
+               <ProjectItem classname="mid" title="Seleção de personagem" subtitle="Menu de seleção de personagem Marvel"
                  link="https://marvelpelectionplayer.vercel.app/" thumbnail={thumbMarvel} tec1={faHtml5} tec2={faCss3Alt} tec3={faSquareJs}></ProjectItem>
                 {/* <ProjectItem classname="mid" title="" subtitle="" link="" thumbnail={"thumb"} ></ProjectItem>
                 <ProjectItem classname="mid" title="" subtitle="" link="" thumbnail={"thumb"} ></ProjectItem>
