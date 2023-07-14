@@ -58,7 +58,6 @@ export const AreaItemInfo = styles.div`
 `
 
 export const SeeMoreArea = styles.div`
-
     width: 100%;
     height: 4rem;
 
@@ -95,6 +94,8 @@ export const ButtonItem = styles.button`
     width: 6rem;
     height: 1.5rem;
     background-color: #fff;
+    
+    font-family: var(--theme-font-Poppins);
 
     border: 1px solid var(--theme-color--gray);
     border-radius: 1rem;

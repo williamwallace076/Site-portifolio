@@ -14,7 +14,7 @@ const Header = () => {
                     <LogoHeader>WillDev.</LogoHeader>
                     <FontAwesomeIcon icon={faCode} style={{color: "#d65151",}} />
                 </LogoContainer>
-                <SocialIcons >
+                <SocialIcons>
                     <IconsLink href="https://www.linkedin.com/in/william-wallace-4b7348237/"><FontAwesomeIcon icon={faLinkedin} size="xl" /></IconsLink>
                     <IconsLink href="https://github.com/williamwallace076"><FontAwesomeIcon icon={faGithub}  size="xl"/></IconsLink>
                 </SocialIcons>

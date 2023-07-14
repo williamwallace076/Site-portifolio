@@ -78,4 +78,20 @@ export const AreaProjectItem = styles.div`
     row-gap: 2rem;
     column-gap: 2rem;
 
+
+    .mid{
+        .seeMore{
+            box-sizing: border-box;
+            margin-right:0.1rem;
+            margin-top: 0.1rem;
+        }
+        button{
+
+            width: max-content;
+        }
+        a{
+            width: 2rem;
+            margin-left:-1.5rem;
+        }
+    }
 `

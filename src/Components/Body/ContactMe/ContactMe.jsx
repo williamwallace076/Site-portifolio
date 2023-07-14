@@ -38,8 +38,6 @@ const ContactMe = () => {
                             </ItemContactList>
 
                        </ContactList>
-
-                        <div>Redes sociais</div>
                     </ContactInfo>
                 </ContactInfoArea>
 

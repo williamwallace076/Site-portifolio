@@ -81,7 +81,7 @@ const AboutMe = () => {
                     </TemplineInfoItem>
                     <TemplineInfoItem>
                         <h2>2023</h2>
-                        <p>Iniciando a graduação em Ciência da Computação, consolidando meu conhecimento em Front-end com integração de APIs , "Sass" e React Js Avançado. 
+                        <p>Iniciando a graduação em Ciência da Computação. Consolidando meu conhecimento em Front-end com integração de APIs , "Sass" e React Js Avançado. 
                             </p>
                     </TemplineInfoItem>
                 </TemplineInfoArea>

@@ -7,6 +7,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import {faSquareJs,faReact,faHtml5, faCss3Alt, faSass, faGithub} from "@fortawesome/free-brands-svg-icons";
 
 
+
 const Main = () => {
     return ( 
         <section>
