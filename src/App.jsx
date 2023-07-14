@@ -4,13 +4,14 @@ import Header from "./Components/Header/Header";
 
 import "./assets/styles/styles.css"
 
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
+
 const App = () => {
     return ( 
-        <>
-        <Header></Header>
-        <Body></Body>
-        <Footer></Footer>
-        </>
+        <BrowserRouter>
+         <Routes/>
+        </BrowserRouter>
      );
 }
  
