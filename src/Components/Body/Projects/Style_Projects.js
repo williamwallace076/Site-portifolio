@@ -82,16 +82,13 @@ export const AreaProjectItem = styles.div`
     .mid{
         .seeMore{
             box-sizing: border-box;
-            margin-right:0.5rem;
+            margin-right:0.2rem;
+            margin-left: -1rem;
             margin-top: 0.1rem;
         }
         button{
 
             width: max-content;
-        }
-        a{
-            width: 2rem;
-            margin-left:-1.5rem;
         }
     }
 `

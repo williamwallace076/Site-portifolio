@@ -70,7 +70,10 @@ export const SeeMoreArea = styles.div`
 
     margin-top: 0;
     margin-bottom: 0.5rem;
-
+    
+    .see-more-link{
+        width: max-content;
+    }
 `
 
 
