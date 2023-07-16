@@ -96,12 +96,152 @@ button:hover{
 
 ` 
 
-export const ImgProjectResponsive = styled.img`
+export const AreaProjectResponsive = styled.div`
 
-width: 40rem;
-height: 25rem;
+width: max-content;
+height: max-content;
+
+display: flex;
+
+flex-direction : row;
+
+align-items: center;
+justify-content: center;
+
+`
+
+export const AreaDesktopResponsive = styled.div`
+
+width: max-content;
+height: max-content;
+
+display: flex;
+
+flex-direction : row;
+
+align-items: center;
+justify-content: center;
+
+position: relative;
+
+`
+
+export const ImgConteinerDesktop = styled.img`
+
+width: 21rem;
+height: 15rem;
+
+margin-top: 0rem;
+margin-left: -6.4rem;
+
+z-index: 5;
+
+`
+
+export const ImgDesktop = styled.img`
+
+position: absolute;
+
+width: 16.1rem;
+height: 10rem;
+
+top: 4.7rem;
+left: 14.2rem;
+
+border-radius: 3px;
+
+z-index: 6;
+
+`
+
+export const AreaDeskPhoneResponsive = styled.div`
+
+width: max-content;
+height: max-content;
+
+display: flex;
+
+flex-direction : row;
+
+align-items: center;
+justify-content: center;
+
+position: relative;
+
+`
+
+
+export const ImgConteinerDeskPhone = styled.img`
+
+width: 15rem;
+height: 17rem;
+
 margin-top: 5rem;
+margin-right: -8rem;
 
-z-index: 10;
+z-index: 5;
+
+
+`
+export const ImgDeskPhone = styled.img`
+
+width: 9.1rem;
+height: 12rem;
+
+top: 8.5rem;
+right: 6.5rem;
+
+z-index: 6;
+
+border-radius: 3px;
+
+position: absolute;
+
+`
+
+export const AreaPhoneResponsive = styled.div`
+
+
+width: max-content;
+height: max-content;
+
+display: flex;
+
+flex-direction : row;
+
+align-items: center;
+justify-content: center;
+
+position: relative;
+
+
+`
+
+export const ImgConteinerPhone = styled.img`
+
+width: 12rem;
+height: 15rem;
+
+
+margin-top: 11rem;
+
+z-index: 8;
+
+
+
+`
+export const ImgPhone = styled.img`
+
+width: 5.4rem;
+height: 11rem;
+
+top: 6.8rem;
+right: 17.85rem;
+
+border-radius: 5px;
+z-index: 7;
+
+position: absolute;
+
 
 `

@@ -1,9 +1,14 @@
 import React from 'react';
-import { AreaButtonsProject, AreaInfoProject, AreaProejto, ImgProjectResponsive } from './Style_AboutProject';
+import { AreaButtonsProject, AreaDeskPhoneResponsive, AreaDesktopResponsive, AreaInfoProject, AreaPhoneResponsive, AreaProejto, AreaProjectResponsive, ImgConteinerDeskPhone, ImgConteinerDesktop, ImgConteinerPhone, ImgDeskPhone, ImgDesktop, ImgPhone } from './Style_AboutProject';
 
-import responsiveImgProject from "./../../assets/imgs/responsiveImg.png";
-import imgtestePC from "./../../assets/imgs/Marvel.png";
-import imgtestePC2 from "./../../assets/imgs/Pokedex.png";
+import desktopForm from "./../../assets/imgs/desktop.png";
+import midForm from "./../../assets/imgs/mid.png";
+import smallForm from "./../../assets/imgs/small.png";
+
+import imgDesktop from "./../../assets/imgs/netflix.png";
+import imgMid from "./../../assets/imgs/netflix-mid.png";
+import imgSmall from "./../../assets/imgs/netflix-small.png";
+
 
 const AboutProject = () => {
     return ( 
@@ -17,10 +22,24 @@ const AboutProject = () => {
                 <p> informaçoes sobre o projeto <br />Lorem ipsumtis tempore imos assumenda ut <br></br> voluptates ea, repellat dolores!</p>
             </div>
 
-            <img className='imgteste1' src={imgtestePC} alt="" />
-            <img className='imgteste2' src={imgtestePC2} alt="" />
-            <img className='imgteste3' src={imgtestePC} alt="" />
-            <ImgProjectResponsive src={responsiveImgProject}  alt='imagem do projeto'></ImgProjectResponsive>
+            <AreaProjectResponsive >
+
+                <AreaDesktopResponsive>
+                    <ImgConteinerDeskPhone src={midForm}  alt='imagem do projeto'></ImgConteinerDeskPhone>
+                    <ImgDesktop src={imgDesktop}  alt='imagem do projeto' ></ImgDesktop>
+                </AreaDesktopResponsive>
+              
+
+                <AreaDeskPhoneResponsive>
+                    <ImgConteinerPhone src={smallForm}  alt='imagem do projeto'></ImgConteinerPhone>
+                    <ImgDeskPhone src={imgMid}  alt='imagem do projeto'  ></ImgDeskPhone>
+                </AreaDeskPhoneResponsive>
+
+                <AreaPhoneResponsive>
+                    <ImgConteinerDesktop src={desktopForm}  alt='imagem do projeto'></ImgConteinerDesktop>
+                    <ImgPhone src={imgSmall}  alt='imagem do projeto'></ImgPhone>
+                </AreaPhoneResponsive>
+            </AreaProjectResponsive>
         
         </AreaInfoProject>
 

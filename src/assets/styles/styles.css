@@ -2,7 +2,8 @@
 
 :root{
     --theme-color--red : #c64042;
-    --theme-color--gray : #b1b1b1;
+    /* --theme-color--gray : #b1b1b1; */
+    --theme-color--gray : #ffffff;
 
     --theme-font-Poppins : 'Poppins', sans-serif;
 }
