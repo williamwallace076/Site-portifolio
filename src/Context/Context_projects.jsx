@@ -16,7 +16,8 @@ const [projectDetails, setProjectDetails] = useState ({
     img_mid: imgMid,
     img_small: imgSmall,
     websiteLink: "https://netflix-clone-swart-sigma.vercel.app/",
-    repositoryLink: "https://github.com/williamwallace076/Netflix-clone"
+    repositoryLink: "https://github.com/williamwallace076/Netflix-clone",
+    id: ""
 })
 
 

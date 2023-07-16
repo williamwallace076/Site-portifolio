@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AreaButtonsProject, AreaDeskPhoneResponsive, AreaDesktopResponsive, AreaInfoProject, AreaPhoneResponsive, AreaProejto, AreaProjectResponsive, ImgConteinerDeskPhone, ImgConteinerDesktop, ImgConteinerPhone, ImgDeskPhone, ImgDesktop, ImgPhone } from './Style_AboutProject';
 
 import desktopForm from "./../../assets/imgs/desktop.png";
 import midForm from "./../../assets/imgs/mid.png";
 import smallForm from "./../../assets/imgs/small.png";
+
+import { useNavigate } from "react-router-dom";
 
 import { ProjectsContext } from '../../Context/Context_projects';
 
@@ -14,14 +16,28 @@ const AboutProject = () => {
 
     const {projectDetails} = useContext(ProjectsContext);
 
+    const navigate = useNavigate();
+
+    const [render, setRender] = useState(true)
+
     const imgDesktop = projectDetails.img_desktop;
     const imgMid = projectDetails.img_mid;
     const imgSmall = projectDetails.img_small;
 
+    useEffect(()=>{
 
-    return ( 
+        if (projectDetails.id === ""){
+            setRender(false)
+            console.log(projectDetails.id);
+            navigate("/");
+        }
+
+    },[])
+
+    return render? ( 
     
-    <AreaProejto>
+        
+        <AreaProejto>
 
         <AreaInfoProject>
 
@@ -46,7 +62,6 @@ const AboutProject = () => {
                 <AreaDesktopResponsive>
                     <ImgConteinerDesktop src={desktopForm}  alt='imagem do projeto'></ImgConteinerDesktop>
                     <ImgDesktop src={imgDesktop}  alt='imagem do projeto no desktop'></ImgDesktop>
-                    {console.log(imgDesktop)}
                 </AreaDesktopResponsive>
             </AreaProjectResponsive>
         
@@ -59,8 +74,8 @@ const AboutProject = () => {
         </AreaButtonsProject>
         
     </AreaProejto>
-    
-    );
+   
+   ): false ;
 }
  
 export default AboutProject;

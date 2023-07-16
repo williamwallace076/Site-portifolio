@@ -11,7 +11,9 @@ const ProjectItem = ({classname, title, subtitle, link, thumbnail, tec1, tec2, t
 
     const updateDetails = ()=>{
 
-        setProjectDetails(details)
+        const newDetails = details
+
+        setProjectDetails(newDetails)
 
     }
 

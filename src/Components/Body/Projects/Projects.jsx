@@ -10,6 +10,10 @@ import eComeceSmall from "../../../assets/imgs/e-comerceSmall.jpg"
 
 
 import thumbNetflix from "../../../assets/imgs/netflix.png";
+import netflixDesktop from "../../../assets/imgs/netflix.png"
+import netflixMid from "../../../assets/imgs/netflix-mid.png"
+import netflixSmall from "../../../assets/imgs/netflix-small.png"
+
 import thumbSpotfy from "../../../assets/imgs/spotfy.png";
 import thumbFlipBird from "../../../assets/imgs/flipbird.png";
 import thumbPokedex from "../../../assets/imgs/pokedex.png";
@@ -28,19 +32,31 @@ const Projects = () => {
                 <AreaProjectItemXl>
                 
                     <ProjectItem classname="xl" title = "E-Commerce ShoppBee"  subtitle = "E-comerce de roupas a acessorios pessoais."
-                     link="https://ecomerce-puce.vercel.app/" thumbnail={thumbEcomerce} tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs} details={{
+                     link="https://ecomerce-puce.vercel.app/" thumbnail={thumbEcomerce} tec1={faReact} tec2={faHtml5}
+                      tec3={faCss3Alt} tec4={faSquareJs} details={{
                         title: "E-Commerce ShoppBee",
                         desc: "E-comerce de roupas a acessorios pessoais.",
                         img_desktop: eComeceDeskotop,
                         img_mid: eComeceMid,
                         img_small: eComeceSmall,
                         websiteLink: "https://ecomerce-puce.vercel.app/",
-                        repositoryLink: "https://github.com/williamwallace076/ecomerce"
+                        repositoryLink: "https://github.com/williamwallace076/ecomerce",
+                        id: 1,
                      }}></ProjectItem>
 
 
                     <ProjectItem classname="xl" title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
-                     link="https://netflix-clone-swart-sigma.vercel.app/" thumbnail={thumbNetflix}  tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs} ></ProjectItem>
+                     link="https://netflix-clone-swart-sigma.vercel.app/" thumbnail={thumbNetflix}  tec1={faReact} tec2={faHtml5}
+                      tec3={faCss3Alt} tec4={faSquareJs} details={{
+                        title: "Netflix Clone",
+                        desc: "Clone do Site Netflix com integração da Api 'theMovieDb'.",
+                        img_desktop: netflixDesktop,
+                        img_mid: netflixMid,
+                        img_small: netflixSmall,
+                        websiteLink: "https://netflix-clone-swart-sigma.vercel.app/",
+                        repositoryLink: "https://github.com/williamwallace076/Netflix-clone",
+                        id: 2,
+                     }} ></ProjectItem>
                     
                 </AreaProjectItemXl>
 
