@@ -145,8 +145,8 @@ position: absolute;
 width: 16.1rem;
 height: 10rem;
 
-top: 4.7rem;
-left: 14.2rem;
+top: 1.2rem;
+right: 3.4rem;
 
 border-radius: 3px;
 
@@ -188,8 +188,8 @@ export const ImgDeskPhone = styled.img`
 width: 9.1rem;
 height: 12rem;
 
-top: 8.5rem;
-right: 6.5rem;
+top: 6.5rem;
+left: 3.5rem;
 
 z-index: 6;
 
@@ -235,8 +235,8 @@ export const ImgPhone = styled.img`
 width: 5.4rem;
 height: 11rem;
 
-top: 6.8rem;
-right: 17.85rem;
+top: 12.3rem;
+right: 3.3rem;
 
 border-radius: 5px;
 z-index: 7;

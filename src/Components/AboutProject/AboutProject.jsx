@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AreaButtonsProject, AreaDeskPhoneResponsive, AreaDesktopResponsive, AreaInfoProject, AreaPhoneResponsive, AreaProejto, AreaProjectResponsive, ImgConteinerDeskPhone, ImgConteinerDesktop, ImgConteinerPhone, ImgDeskPhone, ImgDesktop, ImgPhone } from './Style_AboutProject';
 
 import desktopForm from "./../../assets/imgs/desktop.png";
 import midForm from "./../../assets/imgs/mid.png";
 import smallForm from "./../../assets/imgs/small.png";
 
-import imgDesktop from "./../../assets/imgs/netflix.png";
-import imgMid from "./../../assets/imgs/netflix-mid.png";
-import imgSmall from "./../../assets/imgs/netflix-small.png";
+// import imgDesktop from "../../assets/imgs/netflix.png";
+
+import { ProjectsContext } from '../../Context/Context_projects';
 
 
 const AboutProject = () => {
+
+
+
+    const {projectDetails} = useContext(ProjectsContext);
+
+    const imgDesktop = projectDetails.img_desktop;
+    const imgMid = projectDetails.img_mid;
+    const imgSmall = projectDetails.img_small;
+
+
     return ( 
     
     <AreaProejto>
@@ -18,35 +28,36 @@ const AboutProject = () => {
         <AreaInfoProject>
 
             <div>
-                <h2>Nome do projeto</h2>
-                <p> informaçoes sobre o projeto <br />Lorem ipsumtis tempore imos assumenda ut <br></br> voluptates ea, repellat dolores!</p>
+                <h2>{projectDetails.title}</h2>
+                <p> {projectDetails.desc}</p>
             </div>
 
             <AreaProjectResponsive >
 
-                <AreaDesktopResponsive>
+                <AreaDeskPhoneResponsive>
                     <ImgConteinerDeskPhone src={midForm}  alt='imagem do projeto'></ImgConteinerDeskPhone>
-                    <ImgDesktop src={imgDesktop}  alt='imagem do projeto' ></ImgDesktop>
-                </AreaDesktopResponsive>
+                    <ImgDeskPhone src={imgMid}  alt='imagem do projeto no tablet' ></ImgDeskPhone>
+                </AreaDeskPhoneResponsive>
               
 
-                <AreaDeskPhoneResponsive>
-                    <ImgConteinerPhone src={smallForm}  alt='imagem do projeto'></ImgConteinerPhone>
-                    <ImgDeskPhone src={imgMid}  alt='imagem do projeto'  ></ImgDeskPhone>
-                </AreaDeskPhoneResponsive>
-
                 <AreaPhoneResponsive>
-                    <ImgConteinerDesktop src={desktopForm}  alt='imagem do projeto'></ImgConteinerDesktop>
-                    <ImgPhone src={imgSmall}  alt='imagem do projeto'></ImgPhone>
+                    <ImgConteinerPhone src={smallForm}  alt='imagem do projeto'></ImgConteinerPhone>
+                    <ImgPhone src={imgSmall}  alt='imagem do projeto no telephone'  ></ImgPhone>
                 </AreaPhoneResponsive>
+
+                <AreaDesktopResponsive>
+                    <ImgConteinerDesktop src={desktopForm}  alt='imagem do projeto'></ImgConteinerDesktop>
+                    <ImgDesktop src={imgDesktop}  alt='imagem do projeto no desktop'></ImgDesktop>
+                    {console.log(imgDesktop)}
+                </AreaDesktopResponsive>
             </AreaProjectResponsive>
         
         </AreaInfoProject>
 
 
         <AreaButtonsProject>
-            <button>Abrir Projeto</button>
-            <button>Repositorio</button>
+            <a href={projectDetails.websiteLink}><button>Abrir Projeto</button></a>
+            <a href={projectDetails.repositoryLink}><button>Repositorio</button></a>
         </AreaButtonsProject>
         
     </AreaProejto>
