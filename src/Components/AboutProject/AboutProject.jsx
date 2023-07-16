@@ -5,8 +5,6 @@ import desktopForm from "./../../assets/imgs/desktop.png";
 import midForm from "./../../assets/imgs/mid.png";
 import smallForm from "./../../assets/imgs/small.png";
 
-// import imgDesktop from "../../assets/imgs/netflix.png";
-
 import { ProjectsContext } from '../../Context/Context_projects';
 
 

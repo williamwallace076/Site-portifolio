@@ -4,6 +4,11 @@ import ProjectItem from './ProjectItem/ProjectItem';
 import {AreaProjectItem, AreaProjectItemXl, ProjectsGrid, ProjectsSection} from './Style_Projects';
 
 import thumbEcomerce from "../../../assets/imgs/e-comerce.png";
+import eComeceDeskotop from "../../../assets/imgs/e-comerceDesktop.png"
+import eComeceMid from "../../../assets/imgs/e-comerceMid.png"
+import eComeceSmall from "../../../assets/imgs/e-comerceSmall.jpg"
+
+
 import thumbNetflix from "../../../assets/imgs/netflix.png";
 import thumbSpotfy from "../../../assets/imgs/spotfy.png";
 import thumbFlipBird from "../../../assets/imgs/flipbird.png";
@@ -12,8 +17,7 @@ import thumbTodolist from "../../../assets/imgs/todolist.png";
 import thumbMarvel from "../../../assets/imgs/Marvel.png";
 
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faSquareJs,faReact,faHtml5, faCss3Alt, faSass, faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faSquareJs,faReact,faHtml5, faCss3Alt} from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
     return ( 
@@ -24,9 +28,19 @@ const Projects = () => {
                 <AreaProjectItemXl>
                 
                     <ProjectItem classname="xl" title = "E-Commerce ShoppBee"  subtitle = "E-comerce de roupas a acessorios pessoais."
-                     link="https://ecomerce-puce.vercel.app/" thumbnail={thumbEcomerce} tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs}></ProjectItem>
+                     link="https://ecomerce-puce.vercel.app/" thumbnail={thumbEcomerce} tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs} details={{
+                        title: "E-Commerce ShoppBee",
+                        desc: "E-comerce de roupas a acessorios pessoais.",
+                        img_desktop: eComeceDeskotop,
+                        img_mid: eComeceMid,
+                        img_small: eComeceSmall,
+                        websiteLink: "https://ecomerce-puce.vercel.app/",
+                        repositoryLink: "https://github.com/williamwallace076/ecomerce"
+                     }}></ProjectItem>
+
+
                     <ProjectItem classname="xl" title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
-                     link="https://netflix-clone-swart-sigma.vercel.app/" thumbnail={thumbNetflix}  tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs}></ProjectItem>
+                     link="https://netflix-clone-swart-sigma.vercel.app/" thumbnail={thumbNetflix}  tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs} ></ProjectItem>
                     
                 </AreaProjectItemXl>
 
@@ -46,10 +60,7 @@ const Projects = () => {
                
                <ProjectItem classname="mid" title="Seleção de personagem" subtitle="Menu de seleção de personagem Marvel"
                  link="https://marvelpelectionplayer.vercel.app/" thumbnail={thumbMarvel} tec1={faHtml5} tec2={faCss3Alt} tec3={faSquareJs}></ProjectItem>
-                {/* <ProjectItem classname="mid" title="" subtitle="" link="" thumbnail={"thumb"} ></ProjectItem>
-                <ProjectItem classname="mid" title="" subtitle="" link="" thumbnail={"thumb"} ></ProjectItem>
-                <ProjectItem classname="mid" title="" subtitle="" link="" thumbnail={"thumb"} ></ProjectItem>
-                <ProjectItem classname="mid" title="" subtitle="" link="" thumbnail={"thumb"} ></ProjectItem> */}
+
 
                 </AreaProjectItem>
 
