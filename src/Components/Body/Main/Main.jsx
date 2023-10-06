@@ -14,7 +14,7 @@ const Main = () => {
             <ProfileContainer>
             <TitleArea>
                 <h1>Olá, Me chamo William !</h1>
-                <h2>Desenvolvedor Front-End.</h2>
+                <h2><span>Desenvolvedor</span> <p>Front-End.</p></h2>
 
         
                 <ButonArea>

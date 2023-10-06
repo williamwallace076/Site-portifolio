@@ -59,7 +59,7 @@ height: 20rem;
 border-radius: 3px;
 border: 6px solid var(--theme-color--red);
 position: absolute;
-box-shadow: -11px 14px 54px 1px rgba(198,64,66,0.7);
+box-shadow: -11px 14px 54px 1px rgba(226,70,102,0.7);
 ` 
 
 

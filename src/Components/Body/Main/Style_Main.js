@@ -1,9 +1,27 @@
-import styles from 'styled-components'
+import styles, { keyframes } from 'styled-components'
 
+const typing = keyframes`
+
+
+from{
+width: 0;
+}
+
+
+`
+const blinking = keyframes`
+
+
+50%{
+border-color: transparent;
+}
+
+
+`
 export const ProfileContainer = styles.div`
     width: 100%;
     height: 85vh ;
-    background-color: var(--theme-color--red);
+    background:  linear-gradient(169deg, rgba(235,33,15,1) 4%, rgba(255,147,153,1) 28%, rgba(223,12,62,1) 62%, rgba(226,83,70,1) 86%);
 
     display: flex;
     align-items: center;
@@ -36,13 +54,47 @@ export const TitleArea = styles.div`
     color:#fff;
 
     h1{
+        width: 100%;
         font-size: 2.5rem;
         margin-bottom : 0;
+        border-right: 4px solid;
+        white-space: nowrap;
+        overflow: hidden;
+
+        animation: ${typing} 2.5s steps(23) infinite alternate,
+         ${blinking} 0.5s infinite step-end alternate;
     }
 
     h2{
+        width: max-content;
+        height: 2rem;
+
         margin-top: 0;
         margin-bottom: 3rem;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 0.5rem;
+        
+
+        p{
+            width: 8rem;
+            height: min-content;
+            white-space: nowrap; 
+            color: #2ad3e6;
+            text-shadow: 0 0 12px #2ad3e6;
+
+            overflow: hidden;
+            margin : 0;
+            border-right: 3px solid;
+            animation: ${typing} 2.5s steps(10) alternate,
+            ${blinking} 0.5s infinite step-end alternate;
+            
+        }
     }
 ` 
 export const ButonArea = styles.div`
@@ -81,12 +133,13 @@ export const ButonArea = styles.div`
         align-items: center;
         justify-content: center;
 
-        transition: 0.3s
+        transition: 0.3s;
     }
 
     button:hover{
         cursor:pointer;
-        transform: scale(1.2)
+        transform: scale(1.2);
+        box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.54);
     }
 
     :last-child{

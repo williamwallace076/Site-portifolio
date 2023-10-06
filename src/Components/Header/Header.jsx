@@ -12,11 +12,11 @@ const Header = () => {
             <HeaderArea>
                 <LogoContainer>
                     <LogoHeader>WillDev.</LogoHeader>
-                    <FontAwesomeIcon icon={faCode} style={{color: "#d65151",}} />
+                    <FontAwesomeIcon icon={faCode} style={{color: "#e5102a",}} />
                 </LogoContainer>
                 <SocialIcons>
-                    <IconsLink href="https://www.linkedin.com/in/william-wallace-4b7348237/"><FontAwesomeIcon icon={faLinkedin} size="xl" /></IconsLink>
-                    <IconsLink href="https://github.com/williamwallace076"><FontAwesomeIcon icon={faGithub}  size="xl"/></IconsLink>
+                    <IconsLink href="https://www.linkedin.com/in/william-wallace-4b7348237/"><FontAwesomeIcon className='icon-header' icon={faLinkedin} size="xl" /></IconsLink>
+                    <IconsLink href="https://github.com/williamwallace076"><FontAwesomeIcon className='icon-header' icon={faGithub}  size="xl"/></IconsLink>
                 </SocialIcons>
             </HeaderArea>
         </header>

@@ -1,8 +1,5 @@
 import React from 'react';
-import "./Style_Footer";
-import { FooterArea, FooterParagraph, FooterSosialIcons } from './Style_Footer';
-
-
+import {FooterArea, FooterParagraph, FooterSosialIcons } from './Style_Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
 

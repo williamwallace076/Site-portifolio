@@ -17,6 +17,7 @@ export const HeaderArea = styled.div`
 `
 
 export const LogoContainer = styled.div`
+
     width: 10%;
     height:90%;
     display:flex;
@@ -28,6 +29,7 @@ export const LogoContainer = styled.div`
 
 `
 export const LogoHeader = styled.div`
+
     width:auto;
     height:auto;
     display:flex;
@@ -35,10 +37,17 @@ export const LogoHeader = styled.div`
     text-align:center;
     justify-content:center;
     font-family: var(--theme-font-Poppins);
+    color: #000;
+    
+    &:hover{
+        cursor: pointer;
+        color: var(--theme-color--blue);
+    }
 
 `
 
 export const SocialIcons = styled.div`
+
     width: 10%;
     height: 90%;
     text-align:center;
@@ -48,11 +57,15 @@ export const SocialIcons = styled.div`
     align-items:center;
     justify-content:space-around;
 
-
 `
 
 export const IconsLink = styled.a`
 
 color: #000;
+
+&:hover{
+    scale: calc(1.2);
+    color: var(--theme-color--blue);
+}
 
 `

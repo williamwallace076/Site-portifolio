@@ -12,9 +12,7 @@ export const ProjectsSection = styles.div`
    flex-direction: column;
    justify-content: space-between;
    align-items:center;
-
-   background-color: var(--theme-color--red);
-
+   background: linear-gradient(0deg, rgba(226,70,102,1) 2%, rgba(229,16,42,1) 67%, rgba(237,0,29,1) 91%);
    font-family: var(--theme-font-Poppins);
 
    color: #fff;

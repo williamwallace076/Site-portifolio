@@ -4,7 +4,7 @@ export const FooterArea = styles.section`
 
 width: 100%;
 height:8rem;
-background-color: var(--theme-color--red);
+background: linear-gradient(0deg, rgba(226,70,102,1) 2%, rgba(229,16,42,1) 67%, rgba(237,0,29,1) 91%);
 display: flex;
 flex-direction : column;
 justify-content : center;
