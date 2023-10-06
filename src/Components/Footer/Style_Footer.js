@@ -28,6 +28,7 @@ transition: 0.2s;
 
 .icon-footer:hover{
     transform: scale(1.2);
+    color: var(--theme-color--blue);
     cursor: pointer;
 }
 
@@ -40,6 +41,7 @@ display: flex;
 margin-bottom: -1rem;
 align-items: center;
 font-size: 1.1rem;
+color: #fff;
 
 font-family: var(--theme-font-Poppins);
 `

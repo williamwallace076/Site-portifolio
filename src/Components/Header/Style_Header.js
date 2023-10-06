@@ -57,6 +57,10 @@ export const SocialIcons = styled.div`
     align-items:center;
     justify-content:space-around;
 
+    .icon-header{
+        transition: 0.2s;
+    }
+
 `
 
 export const IconsLink = styled.a`

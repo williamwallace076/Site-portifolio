@@ -40,7 +40,7 @@ export const ProfileContainer = styles.div`
 
     .arrow:hover{
         cursor: pointer;
-        transform: scale(1.2)
+        transform: scale(1.2);
     }
     
 `
@@ -109,6 +109,7 @@ export const ButonArea = styles.div`
     gap: 4rem;
 
     color:#fff;
+    margin-left: 1.1rem;
 
     a{
         width: max-content;
@@ -125,8 +126,6 @@ export const ButonArea = styles.div`
         border-radius : 1rem;
 
         background: transparent;
-
-        color: #fff;
         
         display: flex;
         flex-direction: row;
@@ -136,15 +135,27 @@ export const ButonArea = styles.div`
         transition: 0.3s;
     }
 
+    button#my-repository{
+        width: 10rem;
+        color: #fff;
+        gap: 1rem;
+    }
+    button#my-projects{
+        background-color: var(--theme-color--gray);
+        color: var(--theme-color--red);
+        font-weight: bolder;
+        border: none;
+    }
+
     button:hover{
         cursor:pointer;
         transform: scale(1.2);
-        box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.54);
     }
-
-    :last-child{
-        background-color:#fff;
-        color: var(--theme-color--red);
+    button#my-projects:hover{
+        box-shadow: 0px 4px 10px 1px rgba(229,16,41,0.54);
+    }
+    button#my-repository:hover{
+        box-shadow: 0px 4px 10px 1px rgba(255,255,255,0.54);
     }
 
 ` 

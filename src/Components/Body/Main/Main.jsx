@@ -19,12 +19,12 @@ const Main = () => {
         
                 <ButonArea>
                     <Link to='projects' spy={true} smooth={true} offset={50} duration={1000}  >
-                        <button >Meus Projetos</button>
+                        <button id='my-projects' >Meus Projetos</button>
                     </Link>
                     <a href="https://github.com/williamwallace076">
-                        <button>
+                        <button id='my-repository'>
                             <span>Meu Repositório</span>
-                            <FontAwesomeIcon icon={faGithub} size='xl' style={{color:"#3677e7",}} />
+                            <FontAwesomeIcon icon={faGithub} size='xl' style={{color:"#fff",}} />
                         </button>
                     </a>
                 </ButonArea>
@@ -45,7 +45,7 @@ const Main = () => {
             </ImgProfileArea>
             
             <Link to='about-me' spy={true} smooth={true} offset={10} duration={1000}>
-                <FontAwesomeIcon className='arrow' icon={faChevronDown} size="2xl" style={{color: "#b4b4b4",}} />
+                <FontAwesomeIcon className='arrow' icon={faChevronDown} size="2xl" style={{color: "#fff" }} />
             </Link>
             </ProfileContainer>
         </section>

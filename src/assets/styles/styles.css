@@ -2,9 +2,10 @@
 
 :root{
     --theme-color--blue : #2ad3e6;
-    --theme-color--red : #e5102a;
+    --theme-color--red : #e51029;
     --theme-color--gray : #ffffff;
 
+    
     --theme-font-Poppins : 'Poppins', sans-serif;
 }
 
