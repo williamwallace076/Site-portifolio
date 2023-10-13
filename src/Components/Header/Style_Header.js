@@ -12,6 +12,11 @@ export const HeaderArea = styled.div`
     padding: 0rem 1rem ;
     box-sizing:border-box;
 
+    @media screen and (max-width: 768px){
+
+        padding: 0 2rem ;
+
+    }
 
 
 `
