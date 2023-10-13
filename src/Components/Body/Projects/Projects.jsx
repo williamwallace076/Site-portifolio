@@ -63,7 +63,7 @@ const Projects = () => {
                      }}></ProjectItem>
 
 
-                    <ProjectItem classname="xl" title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
+                    <ProjectItem classname="xl netflix"  title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
                      link="https://netflix-clone-swart-sigma.vercel.app/" thumbnail={thumbNetflix}  tec1={faReact} tec2={faHtml5}
                       tec3={faCss3Alt} tec4={faSquareJs} details={{
                         title: "Netflix Clone",

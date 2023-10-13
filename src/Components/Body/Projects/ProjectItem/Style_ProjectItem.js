@@ -2,7 +2,7 @@ import styles from "styled-components"
 
 export const Item = styles.div`
     width:19rem;
-    height: 18rem;
+    height:18rem; 
     border: 1px solid #000;
     border-radius : 5px;
 
@@ -19,7 +19,8 @@ export const Item = styles.div`
     box-shadow: 1px 4px 10px 1px rgba(0,0,0,0.54);
 
     }
-
+    
+    
 
 `
 export const ImgItem = styles.img`
@@ -44,7 +45,7 @@ export const AreaItemInfo = styles.div`
     box-sizing: border-box;
 
     h3{
-        margin-top: 1%;
+        margin-top: 0.20rem;
         font-size: 1rem;
         margin-bottom: 0;
     }
@@ -55,11 +56,26 @@ export const AreaItemInfo = styles.div`
         margin-bottom: 0.5rem;
     }
 
+
+     @media screen and (max-width: 768px){
+
+
+        h3{
+            font-size: 0.8rem;
+        }
+
+        p
+        {
+            font-size: 0.7rem;
+        }
+
+    }
+
 `
 
 export const SeeMoreArea = styles.div`
     width: 100%;
-    height: 4rem;
+    height: max-content;
 
     display: flex;
     flex-direction: row;
@@ -87,9 +103,15 @@ export const TecnoItemArea = styles.div`
 
     gap: 0.5rem;
 
-    span{
-        width: 1.5rem;
-        height: 1.5rem;
+    
+
+    @media screen and (max-width: 768px){
+
+     .icon-tec{
+
+       width: 1.3rem;
+
+     }
     }
 `
 export const ButtonItem = styles.button`
@@ -111,4 +133,14 @@ export const ButtonItem = styles.button`
         background-color: rgba(177, 177, 177);
         box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.54);
     }
+
+    @media screen and (max-width: 768px){
+
+
+        width: 4.5rem;
+    
+    }
+
+
+
 `
