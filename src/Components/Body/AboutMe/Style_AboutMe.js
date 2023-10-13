@@ -13,6 +13,12 @@ export const AboutMeSection = styles.section`
 
     font-family: var(--theme-font-Poppins);
 
+    @media screen and (max-width: 768px){
+
+        height: 150vh;
+        
+    }
+
 `
 
 export const AboutMeArea = styles.div`
@@ -27,6 +33,11 @@ export const AboutMeArea = styles.div`
     align-items: center;
     justify-content: space-around;
 
+    @media screen and (max-width: 768px){
+
+        justify-content: center;
+
+    }
 
 `
 
@@ -40,6 +51,13 @@ align-items: center;
 justify-content : center;
 position: relative;
 
+
+@media screen and (max-width: 768px){
+
+    margin-left: -3rem;
+
+}
+
 ` 
 export const AboutMeImg = styles.img`
 
@@ -50,6 +68,9 @@ margin-top : -3rem;
 border-radius: 3px;
 box-shadow: -11px 6px 18px -7px rgba(0,0,0,1);
 z-index: 5;
+
+
+
 
 ` 
 export const AboutMeImgBorder = styles.div`
@@ -87,6 +108,21 @@ export const SkilsArea = styles.div`
         margin-bottom: 2rem;
     }
 
+    @media screen and (max-width: 768px){
+
+
+        align-items: center;
+
+        h2{
+            font-size: 2rem;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+
+    }
+
+
 ` 
 export const SkilsParagrafsArea = styles.div`
 
@@ -96,6 +132,7 @@ export const SkilsParagrafsArea = styles.div`
     display: flex;
     flex-direction: column;
     align-items: left;
+
 ` 
 
 export const ParagrafhSkils = styles.div`
@@ -108,6 +145,13 @@ export const ParagrafhSkils = styles.div`
     align-items: center;
 
     gap: 1rem;
+
+    @media screen and (max-width: 768px){
+
+        margin-top: -1rem;
+        
+    }
+
 
 `
 
@@ -155,11 +199,30 @@ export const TempLineArea = styles.div`
         margin-left: -1px;
         background-color: var(--theme-color--red);
     }
+
+    @media screen and (max-width: 768px){
+
+    
+        .cicle-line{
+            width: 13rem;
+            
+        }
+
+        
+    }
+
+
 `
 export const Templine = styles.div`
 
     display:flex;
     flex-direction: row;
+
+    @media screen and (max-width: 768px){
+
+    margin-top: -3.5rem;
+
+    }
 
 `
 
@@ -175,6 +238,13 @@ export const TemplineInfoArea = styles.div`
 
     :first-child{
         margin-right: 2rem;
+    }
+
+    
+    @media screen and (max-width: 768px){
+
+
+        gap: 1rem;
     }
 
 `
@@ -196,6 +266,11 @@ export const TemplineInfoItem = styles.div`
     p{
         font-size: 0.95rem;
     }
+    
+    @media screen and (max-width: 768px){
 
+        margin-left: 2rem;
+
+    }
 `
 

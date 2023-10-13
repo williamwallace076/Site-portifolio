@@ -56,7 +56,7 @@ const AboutMe = () => {
                         <div className="cicle-line"></div>
                     </div>
                     <div className='cicle-area'>
-                        <div className="cicle"></div>
+                        <div className="cicle" id='2'></div>
                         <div className="cicle-line"></div>
                     </div>
                     <div className='cicle-area'>
