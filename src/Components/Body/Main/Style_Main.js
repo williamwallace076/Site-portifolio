@@ -42,6 +42,16 @@ export const ProfileContainer = styles.div`
         cursor: pointer;
         transform: scale(1.2);
     }
+
+    @media screen and (max-width: 768px){
+
+        flex-direction: column-reverse;
+        justify-content: space-around;
+
+        .arrow{
+            left: 45%;
+        }
+    }
     
 `
 
@@ -67,7 +77,7 @@ export const TitleArea = styles.div`
 
     h2{
         width: max-content;
-        height: 2rem;
+        height: max-content;
 
         margin-top: 0;
         margin-bottom: 3rem;
@@ -96,6 +106,26 @@ export const TitleArea = styles.div`
             
         }
     }
+
+    @media screen and (max-width: 768px){
+    
+        width:55%;
+        margin-left: 0;
+
+        align-items: center;
+
+        h1{
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        h2{
+            font-size: 1.5rem;
+            margin : 0 0 2rem 2rem; 
+        }
+
+    }
+
 ` 
 export const ButonArea = styles.div`
     width: 60%;
@@ -158,6 +188,13 @@ export const ButonArea = styles.div`
         box-shadow: 0px 4px 10px 1px rgba(255,255,255,0.54);
     }
 
+
+    @media screen and (max-width: 768px){
+        width: 100%;
+        margin-left: -1rem;
+        margin-bottom: 5rem;
+    }
+
 ` 
 export const ImgProfileArea = styles.div`
 
@@ -171,8 +208,8 @@ export const ImgProfileArea = styles.div`
     align-items: center;
 
     background-profile-img{
-        width: 16rem;
-        height: 16rem; 
+        width: 10em;
+        height: 10rem; 
         object-fit: cover;
        
         border-radius: 50%;
@@ -190,6 +227,28 @@ export const ImgProfileArea = styles.div`
         border-radius:50%;
     }
 
+
+    @media screen and (max-width: 768px){
+    
+       
+        width: max-content;
+        height: max-content;
+
+        background-profile-img{
+            
+            width: 13rem;
+            height: 13rem; 
+
+        }
+
+        img{
+            width: 13rem;
+            height: 13rem; 
+        }
+
+        
+    }
+
 `
 
 export const Tecnologies = styles.div`
@@ -203,5 +262,12 @@ export const Tecnologies = styles.div`
     justify-content: space-around;
     gap: 1rem;
 
+
+    @media screen and (max-width: 768px){
+
+        width: 100%;
+        font-size: 0.9rem;
+
+    }
 
 `
