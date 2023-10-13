@@ -17,6 +17,13 @@ export const AreaForm = styles.div`
 
     }
 
+    @media screen and (max-width: 768px){
+
+        width : auto;
+        margin-left: 1rem;
+
+    }
+
 `
 
 export const AreaInputName = styles.div`

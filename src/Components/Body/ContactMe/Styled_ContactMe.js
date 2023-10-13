@@ -17,6 +17,16 @@ export const ContactMeSection = styles.section`
         margin: 2rem;
     }
 
+    @media screen and (max-width: 768px){
+
+        height: 90vh; 
+
+        h2{
+            margin: 2rem 0 0 0;
+        }
+
+    }
+
 `
 
 export const ContactArea = styles.div`
@@ -29,6 +39,16 @@ export const ContactArea = styles.div`
 
     display: flex;
     flex-direction: row;
+
+    @media screen and (max-width: 768px){
+
+        width: 90%;
+
+        margin-top: 2rem;
+
+        gap: 1rem;
+    }
+
 `
 
 export const ContactInfoArea = styles.div`
@@ -49,6 +69,13 @@ export const ContactInfoArea = styles.div`
     }
     p{
         font-size: 0.8rem;
+    }
+
+    @media screen and (max-width: 768px){
+
+        width: 60%;
+        height: max-content;
+
     }
 `
 export const ContactInfo = styles.div`
