@@ -34,9 +34,8 @@ export const AboutMeArea = styles.div`
     justify-content: space-around;
 
     @media screen and (max-width: 768px){
-
+        margin-top: 2rem;
         justify-content: center;
-
     }
 
 `
@@ -110,11 +109,11 @@ export const SkilsArea = styles.div`
 
     @media screen and (max-width: 768px){
 
-
         align-items: center;
 
         h2{
             font-size: 2rem;
+            margin-top: 2rem;
         }
         h3{
             font-size: 1.5rem;
@@ -132,6 +131,14 @@ export const SkilsParagrafsArea = styles.div`
     display: flex;
     flex-direction: column;
     align-items: left;
+
+    @media screen and (max-width: 768px){
+
+      p{
+        font-size: 0.8rem;
+      }
+
+    }
 
 ` 
 
@@ -202,10 +209,32 @@ export const TempLineArea = styles.div`
 
     @media screen and (max-width: 768px){
 
-    
+        width: 80%;
+        height: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        gap: 0;
+
+        :not(:first-child){
+            margin-left: 0;
+        }
+
+        .cicle-area{
+            width: 2rem;
+            flex-direction: column;
+        }
+        
+        .cicle{
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 7px solid var(--theme-color--red);
+        }
+
         .cicle-line{
-            width: 13rem;
-            
+            width: 5px;
+            height: 8rem;
+            margin-left: 0;
         }
 
         
@@ -214,12 +243,14 @@ export const TempLineArea = styles.div`
 
 `
 export const Templine = styles.div`
-
+    
     display:flex;
     flex-direction: row;
 
     @media screen and (max-width: 768px){
 
+    flex-direction: column;
+    width: min-content;
     margin-top: -3.5rem;
 
     }
@@ -242,9 +273,8 @@ export const TemplineInfoArea = styles.div`
 
     
     @media screen and (max-width: 768px){
-
-
-        gap: 1rem;
+        gap: 0;
+        flex-direction: column;
     }
 
 `
@@ -269,8 +299,18 @@ export const TemplineInfoItem = styles.div`
     
     @media screen and (max-width: 768px){
 
-        margin-left: 2rem;
+        margin-top: 1rem;
+        width: 25rem;
+        height: max-content;
+        margin-left: 0rem;
 
+        h2{
+            margin-top: 0;
+        }
+
+        p{
+            font-size: 0.85rem;
+        }
     }
 `
 

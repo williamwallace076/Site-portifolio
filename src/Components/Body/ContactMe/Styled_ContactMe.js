@@ -76,6 +76,9 @@ export const ContactInfoArea = styles.div`
         width: 60%;
         height: max-content;
 
+        h3{
+            font-size: 1.4rem;
+        }
     }
 `
 export const ContactInfo = styles.div`
