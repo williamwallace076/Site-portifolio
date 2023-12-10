@@ -20,7 +20,7 @@ export const Item = styles.div`
 
     }
     
-    
+        
 
 `
 export const ImgItem = styles.img`
@@ -109,8 +109,8 @@ export const TecnoItemArea = styles.div`
 
      .icon-tec{
 
-       width: 1.3rem;
-
+       background-color: ${props => (props.className == "xl" ? "purple" :"#fff")}
+        
      }
     }
 `

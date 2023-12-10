@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { ProjectsContext } from '../../../../Context/Context_projects';
 
-const ProjectItem = ({classname, title, subtitle, link, thumbnail, tec1, tec2, tec3, tec4, details}) => {
+const ProjectItem = ({classname, classTecno, title, subtitle, link, thumbnail, tec1, tec2, tec3, tec4, details}) => {
 
     const {setProjectDetails } = useContext (ProjectsContext)
 
@@ -26,7 +26,7 @@ const ProjectItem = ({classname, title, subtitle, link, thumbnail, tec1, tec2, t
                 <h3>{title}</h3>
                 <p>{subtitle}</p>
                 <SeeMoreArea>
-                    <TecnoItemArea>
+                    <TecnoItemArea className={classTecno}>
                         <FontAwesomeIcon className='icon-tec' icon={tec1} size='2xl' style={{color:"#3677e7",}} />
                         <FontAwesomeIcon className='icon-tec' icon={tec2} size='2xl' style={{color:"#3677e7",}} />
                         <FontAwesomeIcon className='icon-tec' icon={tec3} size='2xl' style={{color:"#3677e7",}} />

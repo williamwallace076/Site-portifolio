@@ -49,7 +49,7 @@ const Projects = () => {
             <ProjectsGrid>
                 <AreaProjectItemXl>
                 
-                    <ProjectItem classname="xl" title = "E-Commerce ShoppBee"  subtitle = "E-comerce de roupas a acessorios pessoais."
+                    <ProjectItem classname="xl" classTecno="xl" title = "E-Commerce ShoppBee"  subtitle = "E-comerce de roupas a acessorios pessoais."
                      link="https://ecomerce-puce.vercel.app/" thumbnail={thumbEcomerce} tec1={faReact} tec2={faHtml5}
                       tec3={faCss3Alt} tec4={faSquareJs} details={{
                         title: "E-Commerce ShoppBee",
@@ -63,7 +63,7 @@ const Projects = () => {
                      }}></ProjectItem>
 
 
-                    <ProjectItem classname="xl netflix"  title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
+                    <ProjectItem classname="xl netflix" classTecno="xl"  title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
                      link="https://netflix-clone-swart-sigma.vercel.app/" thumbnail={thumbNetflix}  tec1={faReact} tec2={faHtml5}
                       tec3={faCss3Alt} tec4={faSquareJs} details={{
                         title: "Netflix Clone",
@@ -80,7 +80,7 @@ const Projects = () => {
 
                 <AreaProjectItem>
 
-                <ProjectItem classname="mid" title="Spotfy Clone" subtitle="Clone da Landing Page de Planos Do Spotfy" 
+                <ProjectItem classname="mid" classTecno="mid" title="Spotfy Clone" subtitle="Clone da Landing Page de Planos Do Spotfy" 
                 link="https://spotify-clone-eta-three.vercel.app/" thumbnail={thumbSpotfy} tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs} 
                 details={{
                   title: "Spotfy Clone",
@@ -93,7 +93,7 @@ const Projects = () => {
                   id: 3,
                }} ></ProjectItem>
 
-                <ProjectItem classname="mid" title="Flappy Bird" subtitle="Jogo Flappy Bird Com Lógica em JS" 
+                <ProjectItem classname="mid" classTecno="mid" title="Flappy Bird" subtitle="Jogo Flappy Bird Com Lógica em JS" 
                 link="https://flappybirdclone.vercel.app/" thumbnail={thumbFlipBird} tec1={faHtml5} tec2={faCss3Alt} tec3={faSquareJs} 
                  details={{
                         title: "Netflix Clone",
@@ -106,7 +106,7 @@ const Projects = () => {
                         id: 4,
                      }} ></ProjectItem>
 
-                <ProjectItem classname="mid" title="Pokedex" subtitle="Lista de Cards de Pokemons" 
+                <ProjectItem classname="mid" classTecno="mid" title="Pokedex" subtitle="Lista de Cards de Pokemons" 
                 link="https://williamwallace076.github.io/Pokedex/" thumbnail={thumbPokedex} tec1={faHtml5} tec2={faCss3Alt} tec3={faSquareJs} 
                  details={{
                         title: "Pokedex",
@@ -119,7 +119,7 @@ const Projects = () => {
                         id: 5,
                      }} ></ProjectItem>
 
-                <ProjectItem classname="mid" title="List de Tarefas" subtitle="Gerenciamento de tarefas pessoais"
+                <ProjectItem classname="mid" classTecno="mid" title="List de Tarefas" subtitle="Gerenciamento de tarefas pessoais"
                  link="https://todolist-seven-delta.vercel.app/" thumbnail={thumbTodolist} tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs} 
                   details={{
                         title: "ToDo List",
@@ -132,7 +132,7 @@ const Projects = () => {
                         id: 6,
                      }} ></ProjectItem>
                
-               <ProjectItem classname="mid" title="Seleção de personagem" subtitle="Menu de seleção de personagem Marvel"
+               <ProjectItem classname="mid" classTecno="mid" title="Seleção de personagem" subtitle="Menu de seleção de personagem Marvel"
                  link="https://marvelpelectionplayer.vercel.app/" thumbnail={thumbMarvel} tec1={faHtml5} tec2={faCss3Alt} tec3={faSquareJs}
                   details={{
                         title: "Seleção de personagens Marvel",

@@ -46,6 +46,11 @@ padding: 3rem 0;
 
 gap: 3rem;
 
+@media screen and (max-width: 768px){
+
+    width: 100%
+
+   }
 
 `
 
@@ -72,11 +77,9 @@ export const AreaProjectItemXl = styles.div`
     
     @media screen and (max-width: 768px){
 
-
         .xl{
-  
-            width:20rem;
-            height:17rem; 
+            width:18.5rem;
+            height:15.5rem; 
         }
         .xl.netflix{
             p{
