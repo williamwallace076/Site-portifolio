@@ -18,6 +18,13 @@ export const HeaderArea = styled.div`
 
     }
 
+    @media screen and (max-width: 600px){
+
+       padding: 0 ;
+       padding-left : 2rem;
+
+    }
+
 
 `
 
@@ -64,6 +71,14 @@ export const SocialIcons = styled.div`
 
     .icon-header{
         transition: 0.2s;
+    }
+
+    
+    @media screen and (max-width: 600px){
+
+        width: 20%;
+    
+
     }
 
 `
