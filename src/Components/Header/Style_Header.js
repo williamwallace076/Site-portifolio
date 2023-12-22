@@ -20,8 +20,7 @@ export const HeaderArea = styled.div`
 
     @media screen and (max-width: 600px){
 
-       padding: 0 ;
-       padding-left : 2rem;
+       padding: 2rem;
 
     }
 
