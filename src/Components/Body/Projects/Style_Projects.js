@@ -87,6 +87,11 @@ export const AreaProjectItemXl = styles.div`
             }
         }
 
+        @media screen and (max-width: 600px){
+
+        flex-direction: column;
+    }
+
         
     }
 
@@ -135,6 +140,13 @@ export const AreaProjectItem = styles.div`
     }
 
    }
+
+   @media screen and (max-width: 600px){
+
+        display : flex; 
+        flex-direction : column;
+        gap:1rem;
+    }
 
 
 `
