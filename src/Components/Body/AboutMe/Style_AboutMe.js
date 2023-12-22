@@ -38,6 +38,11 @@ export const AboutMeArea = styles.div`
         justify-content: center;
     }
 
+    @media screen and (max-width: 600px){
+
+       flex-direction: column ;
+    }
+
 `
 
 export const AboutMeImgArea = styles.div`
@@ -119,6 +124,17 @@ export const SkilsArea = styles.div`
             font-size: 1.5rem;
         }
 
+    }
+
+    @media screen and (max-width: 600px){
+
+        width:70%;
+        h2{ 
+        font-size:2.2rem;
+        }
+        h3{
+        font-size: 1.7rem;
+        }
     }
 
 
