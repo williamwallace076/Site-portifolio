@@ -52,7 +52,6 @@ export const ProfileContainer = styles.div`
             left: 45%;
         }
     }
-    
 `
 
 export const TitleArea = styles.div`
@@ -126,6 +125,19 @@ export const TitleArea = styles.div`
 
     }
 
+    
+@media screen and (max-width: 600px){
+
+        width: 80%;
+       h1{ 
+       font-size: 1.8rem;
+       }
+
+       h2 { 
+       font-size: 1.3rem;
+       margin:0;
+       }
+    }
 ` 
 export const ButonArea = styles.div`
     width: 60%;
@@ -193,6 +205,11 @@ export const ButonArea = styles.div`
         width: 100%;
         margin-left: -1rem;
         margin-bottom: 5rem;
+    }
+
+    @media screen and (max-width: 600px){
+
+        margin-left:0;
     }
 
 ` 
