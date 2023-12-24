@@ -136,6 +136,7 @@ export const TitleArea = styles.div`
        h2 { 
        font-size: 1.3rem;
        margin:0;
+       margin-bottom: 2rem;
        }
     }
 ` 
