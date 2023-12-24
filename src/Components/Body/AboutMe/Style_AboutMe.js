@@ -22,7 +22,7 @@ export const AboutMeSection = styles.section`
     @media screen and (max-width: 600px){
 
         height: max-content;
-        
+        margin-bottom: 1rem;
     }
 
 
@@ -262,6 +262,7 @@ export const TempLineArea = styles.div`
         margin-right: auto;
         flex-direction: row;
         gap: 0;
+        padding: 0 ;
 
         :not(:first-child){
             margin-left: 0;
@@ -270,6 +271,7 @@ export const TempLineArea = styles.div`
         .cicle-area{
             width: 2rem;
             flex-direction: column;
+            
         }
         
         .cicle{
@@ -279,12 +281,10 @@ export const TempLineArea = styles.div`
         }
 
         .cicle-line{
-            width: 5px;
-            height: 8rem;
+            width: 5px; 
             margin-left: 0;
         }
 
-        
     }
 
 
@@ -298,8 +298,58 @@ export const Templine = styles.div`
 
     flex-direction: column;
     width: min-content;
-    margin-top: -3.5rem;
+    
+    :first-child{
+        .cicle-line{
 
+            height: 10rem;
+
+        }
+    }
+    :nth-child(2){
+
+        .cicle-line{
+
+            height: 8rem;
+
+        }
+    }
+    :nth-child(3){
+
+        .cicle-line{
+
+            height: 5rem;
+
+        }
+    }
+
+    @media screen and (max-width: 600px){
+
+        margin-right: 1rem;
+
+        :first-child{
+            .cicle-line{
+    
+                height: 10rem;
+    
+            }
+        }
+        :nth-child(2){
+    
+            .cicle-line{
+    
+                height: 7rem;
+    
+            }
+        }
+        :nth-child(3){
+    
+            .cicle-line{
+    
+                height: 5rem;
+    
+            }
+        }
     }
 
 `
@@ -322,7 +372,12 @@ export const TemplineInfoArea = styles.div`
     @media screen and (max-width: 768px){
         gap: 0;
         flex-direction: column;
+
+        :first-child{
+            margin-right: 0;
+        }
     }
+
 
 `
 export const TemplineInfoItem = styles.div`

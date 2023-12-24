@@ -51,17 +51,17 @@ const AboutMe = () => {
             <TempLineArea>
 
                 <Templine>
-                    <div className='cicle-area'>
+                    <div className='cicle-area 1'>
                         <div className="cicle"></div>
-                        <div className="cicle-line"></div>
+                        <div className="cicle-line" id='1'></div>
                     </div>
-                    <div className='cicle-area'>
+                    <div className='cicle-area 2'>
                         <div className="cicle" id='2'></div>
-                        <div className="cicle-line"></div>
+                        <div className="cicle-line" id='2'></div>
                     </div>
-                    <div className='cicle-area'>
+                    <div className='cicle-area 3'>
                         <div className="cicle"></div>
-                        <div className="cicle-line"></div>
+                        <div className="cicle-line" id='3'></div>
                     </div>
                 </Templine>
 
