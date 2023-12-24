@@ -27,6 +27,17 @@ export const ContactMeSection = styles.section`
 
     }
 
+    @media screen and (max-width: 600px){
+
+        height: max-content;
+        text-align: center;
+
+        h2{
+            font-size: 2rem;
+        }
+
+    }
+
 `
 
 export const ContactArea = styles.div`
@@ -47,6 +58,15 @@ export const ContactArea = styles.div`
         margin-top: 2rem;
 
         gap: 1rem;
+    }
+
+    @media screen and (max-width: 600px){
+    
+    flex-direction: column;
+    margin-bottom : 2rem;
+    margin-top: 1rem;
+    align-items: center;
+
     }
 
 `
@@ -79,6 +99,10 @@ export const ContactInfoArea = styles.div`
         h3{
             font-size: 1.4rem;
         }
+    }
+    @media screen and (max-width: 600px){
+
+        width: 90%;
     }
 `
 export const ContactInfo = styles.div`
