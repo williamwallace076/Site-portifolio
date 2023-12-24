@@ -90,6 +90,14 @@ export const SeeMoreArea = styles.div`
     .see-more-link{
         width: max-content;
     }
+
+    @media screen and (max-width:600px){
+
+        height: 1rem;
+        margin-bottom: 0;
+
+    } 
+
 `
 
 
@@ -109,8 +117,16 @@ export const TecnoItemArea = styles.div`
 
      .icon-tec{
 
-       background-color: ${props => (props.className == "xl" ? "purple" :"#fff")}
+       font-size: ${props => (props.className == "xl" ? "1.5rem" :"2rem")}
         
+     }
+    }
+    @media screen and (max-width: 600px){
+
+        heigth: 3rem;
+
+     .icon-tec{
+       heigth: 2rem;        
      }
     }
 `
