@@ -24,10 +24,7 @@ export const ProjectsSection = styles.div`
 
    @media screen and (max-width: 768px){
 
-
     padding: 0;
-
-
 
    }
 
@@ -66,12 +63,16 @@ export const AreaProjectItemXl = styles.div`
     display: flex;
     flex-direction: row;
 
-    align-itmens: center;
+    align-items: center;
     justify-content: space-around;
 
     .xl{
         width:25rem;
-        height: 20rem; 
+    }
+
+    .xl.netflix .see-more-area{
+        
+        margin-top: -0.5rem;
     }
 
     
@@ -79,15 +80,17 @@ export const AreaProjectItemXl = styles.div`
 
         .xl{
             width:18.5rem;
-            height:15.5rem; 
         }
         .xl.netflix{
             p{
                 font-size: 0.65rem;
             }
+            .see-more-area{
+                // bottom: 1rem;
+            }
         }
 
-        @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px){
 
         flex-direction: column;
     }
@@ -119,7 +122,6 @@ export const AreaProjectItem = styles.div`
             margin: 0.1rem 0.2rem 0 -1rem;
         }
         button{
-
             width: max-content;
         }
     }
@@ -136,7 +138,6 @@ export const AreaProjectItem = styles.div`
     .mid{
         
         width:17rem;
-        height:17rem; 
     }
 
    }

@@ -20,7 +20,7 @@ export const Item = styles.div`
 
     }
     
-        
+    
 
 `
 export const ImgItem = styles.img`
@@ -34,6 +34,7 @@ export const ImgItem = styles.img`
 export const AreaItemInfo = styles.div`
     width:100%;
     height: 30%;
+
     border-radius: 5px;
 
 
@@ -45,7 +46,7 @@ export const AreaItemInfo = styles.div`
     box-sizing: border-box;
 
     h3{
-        margin-top: 0.20rem;
+        margin-top: 0.2rem;
         font-size: 1rem;
         margin-bottom: 0;
     }
@@ -89,22 +90,22 @@ export const SeeMoreArea = styles.div`
     
     .see-more-link{
         width: max-content;
+        margin-left: 0.3rem;
     }
 
-    @media screen and (max-width:600px){
+    @media and (max-width: 768px){
 
-        height: 1rem;
-        margin-bottom: 0;
+        justify-content: space-around;
+    }
 
-    } 
 
 `
 
 
 export const TecnoItemArea = styles.div`
 
-    width: max-items;
-    height: max-items;
+    width: max-content;
+    height: max-content;
 
     display: flex;
     flex-direction: row;
@@ -117,16 +118,9 @@ export const TecnoItemArea = styles.div`
 
      .icon-tec{
 
-       font-size: ${props => (props.className == "xl" ? "1.5rem" :"2rem")}
+       font-size: ${props => (props.className == "xl" ? "1.5rem" :"1.7rem")};
+       margin-left: -0.2rem;
         
-     }
-    }
-    @media screen and (max-width: 600px){
-
-        heigth: 3rem;
-
-     .icon-tec{
-       heigth: 2rem;        
      }
     }
 `
@@ -147,14 +141,14 @@ export const ButtonItem = styles.button`
     &:hover{
         cursor: pointer;
         background-color: rgba(177, 177, 177);
+        color: #fff;
         box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.54);
     }
 
     @media screen and (max-width: 768px){
 
-
         width: 4.5rem;
-    
+
     }
 
 

@@ -25,7 +25,7 @@ const ProjectItem = ({classname, classTecno, title, subtitle, link, thumbnail, t
             <AreaItemInfo>
                 <h3>{title}</h3>
                 <p>{subtitle}</p>
-                <SeeMoreArea>
+                <SeeMoreArea className='see-more-area'>
                     <TecnoItemArea className={classTecno}>
                         <FontAwesomeIcon className='icon-tec' icon={tec1} size='2xl' style={{color:"#3677e7",}} />
                         <FontAwesomeIcon className='icon-tec' icon={tec2} size='2xl' style={{color:"#3677e7",}} />
