@@ -3,7 +3,7 @@ import styles from "styled-components"
 export const AboutMeSection = styles.section`
 
     width: 100%;
-    height: 130vh;
+    height: max-content;
 
     display: flex;
     flex-direction: column;
@@ -18,6 +18,13 @@ export const AboutMeSection = styles.section`
         height: 150vh;
         
     }
+
+    @media screen and (max-width: 600px){
+
+        height: max-content;
+        
+    }
+
 
 `
 
@@ -41,6 +48,8 @@ export const AboutMeArea = styles.div`
     @media screen and (max-width: 600px){
 
        flex-direction: column ;
+       margin-top: 6rem;
+       
     }
 
 `
@@ -62,6 +71,13 @@ position: relative;
 
 }
 
+@media screen and (max-width: 600px){
+
+    flex-direction: column ;
+    width: max-content;
+    margin-bottom: 1rem;
+ }
+
 ` 
 export const AboutMeImg = styles.img`
 
@@ -73,7 +89,12 @@ border-radius: 3px;
 box-shadow: -11px 6px 18px -7px rgba(0,0,0,1);
 z-index: 5;
 
+@media screen and (max-width: 600px){
 
+    width: 11rem;
+    height: 15rem;
+
+ }
 
 
 ` 
@@ -85,6 +106,16 @@ border-radius: 3px;
 border: 6px solid var(--theme-color--red);
 position: absolute;
 box-shadow: -11px 14px 54px 1px rgba(226,70,102,0.7);
+
+
+@media screen and (max-width: 600px){
+
+    width: 11rem;
+    height: 15rem;
+
+ }
+
+
 ` 
 
 
