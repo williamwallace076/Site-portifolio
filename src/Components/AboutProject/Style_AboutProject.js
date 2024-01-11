@@ -18,12 +18,12 @@ font-family: var(--theme-font-Poppins);
 
 @media screen and (max-width: 600px){ 
 
+height: max-content;
 
-     @media screen and (max-width: 600px){
 }
 
 
-` 
+`
 export const AreaInfoProject = styled.div`
 
 height: 50%;
@@ -71,7 +71,30 @@ gap: 5rem;
     z-index: 12;
 }
 
-` 
+
+@media screen and (max-width: 600px){
+
+    flex-direction : column;
+    gap: 0;
+    height: max-content;
+
+    // .imgteste1{
+
+    //     width: 17rem;
+    //     height: 10rem;
+    // }
+    // .imgteste3{
+    
+    //     width: 8rem;
+    //     height: 10rem;
+    // }
+    // .imgteste2{
+    //     width: 3rem;
+    //     height: 9rem;
+    // }
+}
+
+`
 export const AreaButtonsProject = styled.div`
 
 height: 50%;
@@ -102,7 +125,14 @@ button:hover{
     transform: scale(1.2);
 }
 
-` 
+
+
+@media screen and (max-width: 600px){
+
+    height: max-content;
+}
+
+`
 
 export const AreaProjectResponsive = styled.div`
 
@@ -115,6 +145,7 @@ flex-direction : row;
 
 align-items: center;
 justify-content: center;
+
 
 `
 
@@ -144,6 +175,16 @@ margin-left: -6.4rem;
 
 z-index: 5;
 
+@media screen and (max-width: 600px){
+
+    width: 15rem; 
+    height: 10rem;
+    
+    margin-top: 1.5rem;
+    margin-left: -4.4rem;
+
+}
+
 `
 
 export const ImgDesktop = styled.img`
@@ -159,6 +200,16 @@ right: 3.4rem;
 border-radius: 3px;
 
 z-index: 6;
+
+@media screen and (max-width: 600px){
+
+    top: 2.2rem;
+    right: 2.3rem;
+
+    width: 11.5rem;
+    height: 6.8rem;
+
+}
 
 `
 
@@ -189,6 +240,15 @@ margin-right: -8rem;
 
 z-index: 5;
 
+@media screen and (max-width: 600px){
+
+    margin-top: 5rem;
+    margin-right: -5.5rem;
+
+    width: 10.5rem;
+    height: 13rem;
+
+}
 
 `
 export const ImgDeskPhone = styled.img`
@@ -204,6 +264,17 @@ z-index: 6;
 border-radius: 3px;
 
 position: absolute;
+
+@media screen and (max-width: 600px){
+
+
+    width: 6.4rem;
+    height: 9.2rem;
+
+    top: 6.1rem;
+    left: 2.4rem;
+
+}
 
 `
 
@@ -235,6 +306,15 @@ margin-top: 11rem;
 
 z-index: 8;
 
+@media screen and (max-width: 600px){
+    
+    margin-top: 8rem;
+
+    width: 7.5rem;
+    height: 9rem;
+
+}
+
 
 
 `
@@ -248,8 +328,18 @@ right: 3.3rem;
 
 border-radius: 5px;
 z-index: 7;
-
 position: absolute;
+
+@media screen and (max-width:600px){
+
+    width: 3.5rem;
+    height: 6.5rem;
+
+    
+    top: 8.8rem;
+    right: 2rem;
+
+}
 
 
 `
