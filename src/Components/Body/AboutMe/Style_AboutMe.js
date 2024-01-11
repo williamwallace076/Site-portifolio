@@ -414,5 +414,12 @@ export const TemplineInfoItem = styles.div`
             font-size: 0.85rem;
         }
     }
+
+
+    @media screen and (max-width: 600px){
+
+        width: 16rem;
+
+    }
 `
 

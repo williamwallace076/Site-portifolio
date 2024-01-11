@@ -15,6 +15,14 @@ align-items: center;
 
 font-family: var(--theme-font-Poppins);
 
+
+@media screen and (max-width: 600px){ 
+
+
+     @media screen and (max-width: 600px){
+}
+
+
 ` 
 export const AreaInfoProject = styled.div`
 
