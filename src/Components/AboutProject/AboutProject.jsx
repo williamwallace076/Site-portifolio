@@ -41,7 +41,7 @@ const AboutProject = () => {
 
             <AreaInfoProject>
 
-                <div>
+                <div className='project-title'>
                     <h2>{projectDetails.title}</h2>
                     <p> {projectDetails.desc}</p>
                 </div>
@@ -54,7 +54,7 @@ const AboutProject = () => {
                     </AreaDeskPhoneResponsive>
 
 
-                    <AreaPhoneResponsive>
+                    <AreaPhoneResponsive className='2'>
                         <ImgConteinerPhone src={smallForm} alt='imagem do projeto'></ImgConteinerPhone>
                         <ImgPhone src={imgSmall} alt='imagem do projeto no telephone'  ></ImgPhone>
                     </AreaPhoneResponsive>

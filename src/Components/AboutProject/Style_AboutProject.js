@@ -74,24 +74,25 @@ gap: 5rem;
 
 @media screen and (max-width: 600px){
 
+    .project-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+     h2{
+        font-size: 1.2rem;
+        width: 80%;
+     }
+     p{
+        font-size: 1rem;
+     }
+
+    }
+
     flex-direction : column;
     gap: 0;
     height: max-content;
-
-    // .imgteste1{
-
-    //     width: 17rem;
-    //     height: 10rem;
-    // }
-    // .imgteste3{
-    
-    //     width: 8rem;
-    //     height: 10rem;
-    // }
-    // .imgteste2{
-    //     width: 3rem;
-    //     height: 9rem;
-    // }
 }
 
 `
@@ -130,6 +131,9 @@ button:hover{
 @media screen and (max-width: 600px){
 
     height: max-content;
+    margin: 2rem 0 4rem 0;
+
+    gap:2.5rem;
 }
 
 `
