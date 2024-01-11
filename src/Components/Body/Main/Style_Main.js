@@ -251,6 +251,7 @@ export const ImgProfileArea = styles.div`
        
         width: max-content;
         height: max-content;
+        margin-top: 4rem;
 
         background-profile-img{
             
@@ -258,6 +259,7 @@ export const ImgProfileArea = styles.div`
             height: 13rem; 
 
         }
+
 
         img{
             width: 13rem;
