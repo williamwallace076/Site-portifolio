@@ -128,7 +128,7 @@ export const TitleArea = styles.div`
     
 @media screen and (max-width: 600px){
 
-        width: 80%;
+        width: 95%;
        h1{ 
        font-size: 1.8rem;
        }

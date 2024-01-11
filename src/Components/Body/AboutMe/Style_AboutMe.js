@@ -330,7 +330,7 @@ export const Templine = styles.div`
         :first-child{
             .cicle-line{
     
-                height: 10rem;
+                height: 12rem;
     
             }
         }
@@ -338,7 +338,7 @@ export const Templine = styles.div`
     
             .cicle-line{
     
-                height: 7rem;
+                height: 9rem;
     
             }
         }
@@ -346,7 +346,7 @@ export const Templine = styles.div`
     
             .cicle-line{
     
-                height: 5rem;
+                height: 7rem;
     
             }
         }
