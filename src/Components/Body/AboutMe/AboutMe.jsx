@@ -3,7 +3,7 @@ import { AboutMeArea, AboutMeImg, AboutMeImgArea, AboutMeImgBorder, AboutMeSecti
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faLaptopCode, faRocket, faSitemap, faTerminal } from '@fortawesome/free-solid-svg-icons';
-import imgProfile from "../../../../src/assets/imgs/imgProfile.jpg";
+import imgProfile from "../../../../src/assets/imgs/imgProfile.png";
 
 const AboutMe = () => {
     return ( 

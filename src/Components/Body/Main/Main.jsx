@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButonArea, ImgProfileArea, ProfileContainer, Tecnologies, TitleArea } from './Style_Main';
-import imgProfile from "../../../assets/imgs/imgProfile.jpg";
+import imgProfile from "../../../assets/imgs/imgProfile.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
