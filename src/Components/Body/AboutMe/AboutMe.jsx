@@ -33,12 +33,12 @@ const AboutMe = () => {
                     
                         <ParagrafhSkils>
                             <FontAwesomeIcon icon={faLaptopCode} />
-                            <p> Interesse em Desenvolvimento Front-End</p>
+                            <p>Desenvolvimento Front-End</p>
                         </ParagrafhSkils>
 
                         <ParagrafhSkils>
                             <FontAwesomeIcon icon={faRocket} />
-                            <p> Buscando oportunidade para atuar como desenvolvedor</p>
+                            <p> Atuando no desenvolvimento de Landing Pages</p>
                         </ParagrafhSkils>
 
                     </SkilsParagrafsArea>
@@ -82,6 +82,11 @@ const AboutMe = () => {
                     <TemplineInfoItem>
                         <h2>2023</h2>
                         <p>Iniciando a graduação em Ciência da Computação. Consolidando meu conhecimento em Front-end com integração de APIs , "Sass" e React Js Avançado. 
+                            </p>
+                    </TemplineInfoItem>
+                    <TemplineInfoItem>
+                        <h2>2024</h2>
+                        <p>Atuando com suporte de sistemas no Ministério Público Do Estado do Pará, aperfeicoando técnicas de desenovlvimento. 
                             </p>
                     </TemplineInfoItem>
                 </TemplineInfoArea>
