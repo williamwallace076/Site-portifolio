@@ -104,8 +104,8 @@ export const AreaProjectItemXl = styles.div`
 export const AreaProjectItem = styles.div`
     width: max-content;
     height: max-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30rem;
+    margin-right: 20rem;
 
     display: grid;
    

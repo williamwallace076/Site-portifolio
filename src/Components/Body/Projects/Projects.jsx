@@ -45,6 +45,7 @@ const Projects = () => {
     return ( 
         <ProjectsSection id= "projects">
             <h2>Projetos</h2>
+            
 
             <ProjectsGrid>
                 <AreaProjectItemXl>
@@ -66,8 +67,8 @@ const Projects = () => {
                     <ProjectItem classname="xl netflix" classTecno="xl"  title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
                      link="https://netflix-clone-swart-sigma.vercel.app/" thumbnail={thumbNetflix}  tec1={faReact} tec2={faHtml5}
                       tec3={faCss3Alt} tec4={faSquareJs} details={{
-                        title: "Netflix Clone",
-                        desc: "Clone do Site Netflix com integração da Api 'theMovieDb'.",
+                        title: "Netflix layout",
+                        desc: "Prototipo da página inicial isnpirada no layout e desing da empresa Netflix.",
                         img_desktop: netflixDesktop,
                         img_mid: netflixMid,
                         img_small: netflixSmall,
@@ -83,8 +84,8 @@ const Projects = () => {
                 <ProjectItem classname="mid" classTecno="mid" title="Spotfy Clone" subtitle="Clone da Landing Page de Planos Do Spotfy" 
                 link="https://spotify-clone-eta-three.vercel.app/" thumbnail={thumbSpotfy} tec1={faReact} tec2={faHtml5} tec3={faCss3Alt} tec4={faSquareJs} 
                 details={{
-                  title: "Spotfy Clone",
-                  desc: "Landing page clone da Página de Planos Premium do Spotfy. ",
+                  title: "Spotfy layout",
+                  desc: "Prototipo da Landing page isnpirada no layout e desing da empresa Spotfy. ",
                   img_desktop: spotPremiumDesktop,
                   img_mid: spotPremiumMid,
                   img_small: spotPremiumSmall,
@@ -145,7 +146,7 @@ const Projects = () => {
                         id: 7,
                      }} ></ProjectItem> */}
 
-
+                  <p>(Projeto com fins não comerciais, com proposito de mostrar ás habilidades de programação do desonvolvedor ao criar lading pages e sites, todos os direitos reservados às empressas Netflix e spotfy)</p>
                 </AreaProjectItem>
 
             </ProjectsGrid>
