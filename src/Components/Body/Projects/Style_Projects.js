@@ -33,21 +33,30 @@ export const ProjectsSection = styles.div`
 
 export const ProjectsGrid = styles.div`
 
-width: 90%;
-height: max-content;
+    width: 90%;
+    height: max-content;
 
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-padding: 3rem 0;
+    padding: 3rem 0;
 
-gap: 3rem;
+    gap: 3rem;
 
-@media screen and (max-width: 768px){
+    @media screen and (max-width: 768px){
 
-    width: 100%;
+        width: 100%;
 
-   }
+    }
+
+
+    p{
+
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+
+    }
 
 `
 
