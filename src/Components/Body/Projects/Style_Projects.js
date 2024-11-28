@@ -45,7 +45,7 @@ gap: 3rem;
 
 @media screen and (max-width: 768px){
 
-    width: 100%
+    width: 100%;
 
    }
 
@@ -147,6 +147,7 @@ export const AreaProjectItem = styles.div`
         display : flex; 
         flex-direction : column;
         gap:1rem;
+        margin-left: 3rem;
     }
 
 
