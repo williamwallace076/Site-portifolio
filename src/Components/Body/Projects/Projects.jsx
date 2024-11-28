@@ -93,7 +93,7 @@ const Projects = () => {
                   id: 3,
                }} ></ProjectItem>
 
-                <ProjectItem classname="mid" classTecno="mid" title="Flappy Bird" subtitle="Jogo Flappy Bird Com Lógica em JS" 
+                {/* <ProjectItem classname="mid" classTecno="mid" title="Flappy Bird" subtitle="Jogo Flappy Bird Com Lógica em JS" 
                 link="https://flappybirdclone.vercel.app/" thumbnail={thumbFlipBird} tec1={faHtml5} tec2={faCss3Alt} tec3={faSquareJs} 
                  details={{
                         title: "Netflix Clone",
@@ -143,7 +143,7 @@ const Projects = () => {
                         websiteLink: "https://marvelpelectionplayer.vercel.app/",
                         repositoryLink: "https://github.com/williamwallace076/MarvelSelectionPlayer",
                         id: 7,
-                     }} ></ProjectItem>
+                     }} ></ProjectItem> */}
 
 
                 </AreaProjectItem>
