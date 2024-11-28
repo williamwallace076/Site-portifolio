@@ -64,7 +64,7 @@ const Projects = () => {
                      }}></ProjectItem>
 
 
-                    <ProjectItem classname="xl netflix" classTecno="xl"  title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
+                    {/* <ProjectItem classname="xl netflix" classTecno="xl"  title = "Netflix Clone"  subtitle= "Clone do Site Netflix com integração da Api 'theMovieDb'."
                      link="https://netflix-clone-swart-sigma.vercel.app/" thumbnail={thumbNetflix}  tec1={faReact} tec2={faHtml5}
                       tec3={faCss3Alt} tec4={faSquareJs} details={{
                         title: "Netflix layout",
@@ -75,7 +75,7 @@ const Projects = () => {
                         websiteLink: "https://netflix-clone-swart-sigma.vercel.app/",
                         repositoryLink: "https://github.com/williamwallace076/Netflix-clone",
                         id: 2,
-                     }} ></ProjectItem>
+                     }} ></ProjectItem> */}
                     
                 </AreaProjectItemXl>
 
@@ -149,7 +149,7 @@ const Projects = () => {
 
             </ProjectsGrid>
             
-            <p id='direitos'>(Todos os sites hospedados aqui não possuem fins comerciais, contendo apenas o propósito de demonstrar ás habilidades de programação do desonvolvedor de criação de Lading pages e Sites, todos os direitos reservados às empressas Netflix e spotfy)</p>
+            <p id='direitos'>(Todos os sites hospedados aqui não possuem fins comerciais, contendo apenas o propósito de demonstrar ás habilidades de programação do desonvolvedor de criação de Lading pages e Sites, todos os direitos reservados a empresa spotfy)</p>
 
         </ProjectsSection>
      );
