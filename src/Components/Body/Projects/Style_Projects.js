@@ -104,16 +104,20 @@ export const AreaProjectItemXl = styles.div`
 export const AreaProjectItem = styles.div`
     width: max-content;
     height: max-content;
-    margin-left: 45rem;
-    margin-right: 20rem;
+    margin-left: auto;
+    margin-right: auto;
 
-    display: grid;
+    // display: grid;
    
 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 2rem;
-    column-gap: 2rem;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    // row-gap: 2rem;
+    // column-gap: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
     .mid{
@@ -131,8 +135,8 @@ export const AreaProjectItem = styles.div`
    @media screen and (max-width: 768px){
 
 
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
 
 
     .mid{
@@ -147,7 +151,7 @@ export const AreaProjectItem = styles.div`
         display : flex; 
         flex-direction : column;
         gap:1rem;
-        margin-left: 3rem;
+        // margin-left: 3rem;
     }
 
 
