@@ -145,11 +145,11 @@ const Projects = () => {
                         repositoryLink: "https://github.com/williamwallace076/MarvelSelectionPlayer",
                         id: 7,
                      }} ></ProjectItem> */}
-
-                  <p>(Projeto com fins não comerciais, com proposito de mostrar ás habilidades de programação do desonvolvedor ao criar lading pages e sites, todos os direitos reservados às empressas Netflix e spotfy)</p>
                 </AreaProjectItem>
 
             </ProjectsGrid>
+            
+            <p id='direitos'>(Projeto com fins não comerciais, com proposito de mostrar ás habilidades de programação do desonvolvedor ao criar lading pages e sites, todos os direitos reservados às empressas Netflix e spotfy)</p>
 
         </ProjectsSection>
      );
