@@ -237,8 +237,7 @@ export const ImgProfileArea = styles.div`
 
     img{
         width: 16rem;
-        height: 16rem; 
-        object-fit: cover;
+        height: 16rem;
         object-position: 0rem 0rem;
         border: 4px solid #FFF;
 
