@@ -149,7 +149,7 @@ const Projects = () => {
 
             </ProjectsGrid>
             
-            <p id='direitos'>(Projeto com fins não comerciais, com proposito de mostrar ás habilidades de programação do desonvolvedor ao criar lading pages e sites, todos os direitos reservados às empressas Netflix e spotfy)</p>
+            <p id='direitos'>(Todos os sites hospedados aqui não possuem fins comerciais, contendo apenas o propósito de demonstrar ás habilidades de programação do desonvolvedor de criação de Lading pages e Sites, todos os direitos reservados às empressas Netflix e spotfy)</p>
 
         </ProjectsSection>
      );
