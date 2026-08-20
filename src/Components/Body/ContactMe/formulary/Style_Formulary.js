@@ -1,80 +1,90 @@
-import styles from "styled-components";
+import styled from "styled-components";
 
+export const AreaForm = styled.div`
+  min-width: 0;
+`;
 
-export const AreaForm = styles.div`
+export const FormCard = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border-radius: 2rem;
+  border: 1px solid rgba(123, 151, 255, 0.12);
+  background: rgba(4, 8, 18, 0.9);
 
-    width: 60%;
-    height: max-content;
-    margin-left: 3rem;
+  @media screen and (max-width: 520px) {
+    border-radius: 1.5rem;
+  }
+`;
 
-    form{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
+export const AreaInputName = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 
-        gap: 1rem;
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
-    }
+const fieldStyle = `
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(123, 151, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  font: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 
-    @media screen and (max-width: 768px){
+  &::placeholder {
+    color: #7f8da8;
+  }
 
-        width : auto;
-        margin-left: 1rem;
+  &:focus {
+    outline: none;
+    border-color: rgba(78, 126, 255, 0.68);
+    box-shadow: 0 0 0 4px rgba(62, 115, 255, 0.12);
+  }
+`;
 
-    }
+export const InputItem = styled.input`
+  ${fieldStyle}
+`;
 
-`
+export const Textarea = styled.textarea`
+  ${fieldStyle}
+  min-height: 10rem;
+  resize: vertical;
+`;
 
-export const AreaInputName = styles.div`
+export const ButtonForm = styled.button`
+  width: fit-content;
+  padding: 0.95rem 1.35rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3e73ff 0%, #1f4dd8 100%);
+  color: #f6f9ff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 
-width: 100%;
-height: max-content;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 35px rgba(33, 86, 255, 0.3);
+  }
 
-display: flex;
-flex-direction: row;
-gap: 3rem;
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
+`;
 
-`
-export const InputItem = styles.input`
-
-width: 100%;
-height: 2.4rem;
-
-padding-left: 1rem;
-box-sizing:border-box;
-
-border: none;
-border-radius: 1rem;
-
-
-`
-export const Textarea = styles.textarea`
-
-width: 100%;
-height: 10rem;
-
-padding-left: 1rem;
-padding-top: 1rem;
-box-sizing:border-box;
-
-border: none;
-border-radius: 1rem;
-
-
-`
-export const ButtonForm = styles.button`
-
-    width: 9rem;
-    height: 2.7rem;
-    border: none;
-    border-radius: 1.3rem;
-
-    transition: 0.3s;
-
-    &:hover{
-        cursor:pointer;
-        transform: scale(1.1);
-        box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.54);
-    }
-`
+export const FormStatus = styled.p`
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.92rem;
+`;

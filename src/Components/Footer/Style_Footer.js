@@ -1,49 +1,68 @@
-import styles from "styled-components";
+import styled from "styled-components";
 
-export const FooterArea = styles.section`
+export const FooterArea = styled.footer`
+  width: min(1600px, calc(100% - 2rem));
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(123, 151, 255, 0.12);
+  border-radius: 1.75rem;
+  background: rgba(5, 9, 18, 0.9);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
 
-width: 100%;
-height:8rem;
-background: linear-gradient(0deg, rgba(226,70,102,1) 2%, rgba(229,16,42,1) 67%, rgba(237,0,29,1) 91%);
-display: flex;
-flex-direction : column;
-justify-content : center;
-align-items: center;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
 
-`
+  @media screen and (max-width: 480px) {
+    width: min(1600px, calc(100% - 1rem));
+    padding: 1.15rem;
+    border-radius: 1.35rem;
+  }
+`;
 
-export const FooterSosialIcons= styles.div`
+export const FooterMeta = styled.div`
+  strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+  }
 
-width: max-content;
-height:max-content;
+  span {
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+`;
 
-display: flex;
-flex-direction: row;
-gap: 1rem;
-align-items: center;
+export const FooterSosialIcons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+`;
 
-.icon-footer{
-transition: 0.2s;
-}
+export const FooterLink = styled.a`
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(123, 151, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  display: grid;
+  place-items: center;
+  transition: transform 0.25s ease, color 0.25s ease;
 
-.icon-footer:hover{
-    transform: scale(1.2);
-    color: var(--theme-color--blue);
-    cursor: pointer;
-}
+  &:hover {
+    color: var(--text-primary);
+    transform: translateY(-2px);
+  }
+`;
 
-`
-export const FooterParagraph = styles.p`
-
-width: 100%;
-height: max-content;
-display: flex;
-margin-bottom: -1rem;
-align-items: center;
-font-size: 1.1rem;
-color: #fff;
-
-font-family: var(--theme-font-Poppins);
-`
-
-
+export const FooterParagraph = styled.p`
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+`;

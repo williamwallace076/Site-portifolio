@@ -1,167 +1,231 @@
-import styles from "styled-components"
+import styled from "styled-components";
 
-export const ProjectsSection = styles.div`
+export const ProjectsSection = styled.section`
+  width: min(1600px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 
-   width: 100%;
-   height: max-content;
+  @media screen and (max-width: 480px) {
+    width: min(1600px, calc(100% - 1rem));
+  }
+`;
 
-   padding: 2rem 0;
-   box-sizing: border-box;
+export const ProjectHeader = styled.div`
+  max-width: 48rem;
 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items:center;
-   background: linear-gradient(0deg, rgba(226,70,102,1) 2%, rgba(229,16,42,1) 67%, rgba(237,0,29,1) 91%);
-   font-family: var(--theme-font-Poppins);
+  h2 {
+    margin: 0 0 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+  }
+`;
 
-   color: #fff;
+export const SectionTag = styled.span`
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(62, 115, 255, 0.12);
+  color: var(--accent-soft);
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+`;
 
-   h2{
-    font-size: 2.5rem;
-    margin-bottom: 0;
-   }
+export const SectionLead = styled.p`
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.8;
+`;
 
-   @media screen and (max-width: 768px){
+export const ProjectList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+`;
 
-    padding: 0;
+export const ProjectFeature = styled.article`
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1.4rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border-radius: 2rem;
+  border: 1px solid rgba(123, 151, 255, 0.14);
+  background:
+    radial-gradient(circle at top left, rgba(62, 115, 255, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(8, 15, 31, 0.96) 0%, rgba(4, 9, 20, 0.9) 100%);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
 
-   }
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 
+  @media screen and (max-width: 520px) {
+    border-radius: 1.5rem;
+  }
+`;
 
-`
+export const ProjectPreview = styled.img`
+  width: 100%;
+  height: 100%;
+  min-height: 22rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #02050d;
 
-export const ProjectsGrid = styles.div`
+  @media screen and (max-width: 520px) {
+    min-height: 14rem;
+    border-radius: 1.15rem;
+  }
+`;
 
-    width: 90%;
-    height: max-content;
+export const ProjectPreviewEmpty = styled.div`
+  width: 100%;
+  min-height: 22rem;
+  border-radius: 1.5rem;
+  border: 1px dashed rgba(123, 151, 255, 0.24);
+  background:
+    radial-gradient(circle at top, rgba(62, 115, 255, 0.12), transparent 50%),
+    rgba(2, 5, 13, 0.92);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.2rem;
 
-    display: flex;
-    flex-direction: column;
+  span {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
 
-    padding: 3rem 0;
+  @media screen and (max-width: 520px) {
+    min-height: 14rem;
+    border-radius: 1.15rem;
+  }
+`;
 
-    gap: 3rem;
+export const ProjectContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    @media screen and (max-width: 768px){
+  h3 {
+    margin: 0 0 0.65rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    line-height: 1.02;
+  }
 
-        width: 100%;
+  p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+`;
 
-    }
+export const ProjectBadge = styled.span`
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+`;
 
+export const ProjectDescription = styled.p`
+  margin-top: 1rem !important;
+`;
 
-    p{
+export const ProjectStats = styled.div`
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.35rem 0;
+`;
 
-    display: flex;
-    align-items: center;
-    font-size: 0.6rem;
+export const ProjectStat = styled.div`
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  color: var(--text-muted);
 
-    }
+  svg {
+    color: var(--accent);
+  }
+`;
 
-`
+export const ProjectTech = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+`;
 
-export const AreaProjectItemXl = styles.div`
+export const ProjectTechItem = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(123, 151, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 2rem;
+  svg {
+    color: var(--accent);
+  }
 
-    height: max-content;
-
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: space-around;
-
-    .xl{
-        width:25rem;
-    }
-
-    .xl.netflix .see-more-area{
-        
-        margin-top: -0.5rem;
-    }
-
-    
-    @media screen and (max-width: 768px){
-
-        .xl{
-            width:18.5rem;
-        }
-        .xl.netflix{
-            p{
-                font-size: 0.65rem;
-            }
-            .see-more-area{
-                // bottom: 1rem;
-            }
-        }
-
-    @media screen and (max-width: 600px){
-
-        flex-direction: column;
-    }
-
-        
-    }
-
-
-`
-
-export const AreaProjectItem = styles.div`
-    width: max-content;
-    height: max-content;
-    margin-left: auto;
-    margin-right: auto;
-
-    // display: grid;
-   
-
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(2, 1fr);
-    // row-gap: 2rem;
-    // column-gap: 2rem;
-
-    display: flex;
-    align-items: center;
+  @media screen and (max-width: 420px) {
+    width: 100%;
     justify-content: center;
+  }
+`;
 
+export const ProjectActions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
 
-    .mid{
-        .seeMore{
-            box-sizing: border-box;
-            margin: 0.1rem 0.2rem 0 -1rem;
-        }
-        button{
-            width: max-content;
-        }
+  a {
+    padding: 0.9rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+
+  a:first-child {
+    color: #f6f9ff;
+    background: linear-gradient(135deg, #3e73ff 0%, #1f4dd8 100%);
+  }
+
+  a:last-child {
+    color: var(--text-primary);
+    border: 1px solid rgba(123, 151, 255, 0.16);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  a:hover {
+    transform: translateY(-2px);
+  }
+
+  @media screen and (max-width: 420px) {
+    a {
+      width: 100%;
+      text-align: center;
     }
-
-
-    
-   @media screen and (max-width: 768px){
-
-
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-template-rows: repeat(3, 1fr);
-
-
-    .mid{
-        
-        width:17rem;
-    }
-
-   }
-
-   @media screen and (max-width: 600px){
-
-        display : flex; 
-        flex-direction : column;
-        gap:1rem;
-        // margin-left: 3rem;
-    }
-
-
-`
+  }
+`;

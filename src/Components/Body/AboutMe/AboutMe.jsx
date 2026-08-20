@@ -1,101 +1,66 @@
-import React from 'react';
-import { AboutMeArea, AboutMeImg, AboutMeImgArea, AboutMeImgBorder, AboutMeSection, ParagrafhSkils, SkilsArea, SkilsParagrafsArea, TempLineArea, Templine, TemplineInfoArea, TemplineInfoItem } from "./Style_AboutMe";
+import {
+  AboutGrid,
+  AboutMeSection,
+  AboutText,
+  HighlightCard,
+  HighlightList,
+  SectionLead,
+  SectionTag,
+  Timeline,
+  TimelineCard,
+  TimelineTrack,
+  TimelineViewport,
+  TimelineYear,
+} from "./Style_AboutMe";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap, faLaptopCode, faRocket, faSitemap, faTerminal } from '@fortawesome/free-solid-svg-icons';
-import imgProfile from "../../../../src/assets/imgs/imgProfile.jpeg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { aboutHighlights, careerTimeline } from "../../../data/siteContent";
 
 const AboutMe = () => {
-    return ( 
-        <AboutMeSection id='about-me'>
+  const timelineLoop = [...careerTimeline, ...careerTimeline];
 
-            <AboutMeArea>
-                <AboutMeImgArea>
-                    <AboutMeImg src={imgProfile} alt="Foto do perfil de William Wallace" />
-                    <AboutMeImgBorder></AboutMeImgBorder>
-                </AboutMeImgArea>
+  return (
+    <AboutMeSection id="about">
+      <AboutGrid>
+        <AboutText>
+          <SectionTag>Sobre mim</SectionTag>
+          <h2>Hoje eu desenvolvo soluções web com uma base fullstack, unindo interface, estrutura e integração em uma mesma entrega.</h2>
+          <SectionLead>
+            Minha trajetória começou com lógica de programação ainda no ensino médio e foi evoluindo para o
+            desenvolvimento web, projetos pessoais, formação técnica e graduação em tecnologia. Com o tempo, fui
+            ampliando essa atuação para trabalhar não só na interface, mas também na estrutura e nas integrações que
+            fazem uma aplicação funcionar de verdade.
+          </SectionLead>
+        </AboutText>
 
-                <SkilsArea>
-                    <h2>Sobre Mim</h2>
+        <HighlightList>
+          {aboutHighlights.map((item) => (
+            <HighlightCard key={item.title}>
+              <FontAwesomeIcon icon={item.icon} />
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </HighlightCard>
+          ))}
+        </HighlightList>
+      </AboutGrid>
 
-                    <h3>William Wallce</h3>
+      <TimelineViewport>
+        <Timeline>
+          <TimelineTrack>
+            {timelineLoop.map((item, index) => (
+              <TimelineCard key={`${item.year}-${index}`}>
+                <TimelineYear>{item.year}</TimelineYear>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </TimelineCard>
+            ))}
+          </TimelineTrack>
+        </Timeline>
+      </TimelineViewport>
+    </AboutMeSection>
+  );
+};
 
-                    <SkilsParagrafsArea>
-                        <ParagrafhSkils>
-                            <FontAwesomeIcon icon={faTerminal} /> 
-                            <p> Desenvolvendo Interfaces Web Desde 2022</p>
-                        </ParagrafhSkils>
-                     
-                        <ParagrafhSkils>
-                            <FontAwesomeIcon icon={faGraduationCap} />
-                            <p>Técnico em Desenvolvimento de Sistemas, graduando em Ciência da Computação</p>
-                        </ParagrafhSkils>
-                    
-                        <ParagrafhSkils>
-                            <FontAwesomeIcon icon={faLaptopCode} />
-                            <p>Desenvolvimento Front-End</p>
-                        </ParagrafhSkils>
-
-                        <ParagrafhSkils>
-                            <FontAwesomeIcon icon={faRocket} />
-                            <p> Atuando no desenvolvimento de Landing Pages</p>
-                        </ParagrafhSkils>
-
-                    </SkilsParagrafsArea>
-
-                </SkilsArea>
-
-            </AboutMeArea>
-
-
-            <TempLineArea>
-
-                <Templine>
-                    <div className='cicle-area 1'>
-                        <div className="cicle"></div>
-                        <div className="cicle-line" id='1'></div>
-                    </div>
-                    <div className='cicle-area 2'>
-                        <div className="cicle" id='2'></div>
-                        <div className="cicle-line" id='2'></div>
-                    </div>
-                    <div className='cicle-area 3'>
-                        <div className="cicle"></div>
-                        <div className="cicle-line" id='3'></div>
-                    </div>
-                </Templine>
-
-            
-                <TemplineInfoArea>
-                    <TemplineInfoItem>
-                        <h2>2020</h2>
-                        <p>Iniciando minha experiência com desenvolvimento durante o ensino médio, estudando lógica de programação com a linguagem "C++".
-                            Realizando meu primeiro projeto Web em uma atividade para o meu curso técnico.
-
-                            </p>
-                    </TemplineInfoItem>
-                    <TemplineInfoItem>
-                        <h2>2022</h2>
-                        <p>Aprofundando meu conhecimento em desenvolvimento web, utilizando "React Js" e aplicando o que aprendi desenvolvendo projetos pessoais ao longo do ano.
-                        </p>
-                    </TemplineInfoItem>
-                    <TemplineInfoItem>
-                        <h2>2023</h2>
-                        <p>Iniciando a graduação em Ciência da Computação. Consolidando meu conhecimento em Front-end com integração de APIs , "Sass" e React Js Avançado. 
-                            </p>
-                    </TemplineInfoItem>
-                    <TemplineInfoItem>
-                        <h2>2024</h2>
-                        <p>Atuando com suporte de sistemas no Ministério Público Do Estado do Pará, aperfeicoando técnicas de desenovlvimento. 
-                            </p>
-                    </TemplineInfoItem>
-                </TemplineInfoArea>
-
-
-            </TempLineArea>
-
-        </AboutMeSection>
-     );
-}
- 
-export default AboutMe ;
+export default AboutMe;

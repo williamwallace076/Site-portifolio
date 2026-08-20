@@ -1,26 +1,56 @@
-import React from 'react';
-import {HeaderArea, IconsLink, LogoContainer, LogoHeader, SocialIcons} from "./Style_Header";
+import {
+  Brand,
+  BrandIcon,
+  HeaderArea,
+  HeaderShell,
+  Nav,
+  NavLink,
+  SocialIcons,
+  SocialLink,
+} from "./Style_Header";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
-import {faCode } from "@fortawesome/free-solid-svg-icons";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-    return ( 
-        <header>
-            <HeaderArea>
-                <LogoContainer>
-                    <LogoHeader>WillDev.</LogoHeader>
-                    <FontAwesomeIcon icon={faCode} style={{color: "#e5102a",}} />
-                </LogoContainer>
-                <SocialIcons>
-                    <IconsLink href="https://www.linkedin.com/in/william-wallace-4b7348237/"><FontAwesomeIcon className='icon-header' icon={faLinkedin} size="xl" /></IconsLink>
-                    <IconsLink href="https://github.com/williamwallace076"><FontAwesomeIcon className='icon-header' icon={faGithub}  size="xl"/></IconsLink>
-                </SocialIcons>
-            </HeaderArea>
-        </header>
-      );
-}
- 
+  return (
+    <HeaderShell>
+      <HeaderArea>
+        <Brand href="#top" aria-label="Ir para o topo da página">
+          <strong>WillDev.</strong>
+          <BrandIcon aria-hidden="true">
+            <FontAwesomeIcon icon={faCode} />
+          </BrandIcon>
+        </Brand>
+
+        <Nav aria-label="Navegação principal">
+          <NavLink href="#about">Sobre</NavLink>
+          <NavLink href="#projects">Projetos</NavLink>
+          <NavLink href="#contact">Contato</NavLink>
+        </Nav>
+
+        <SocialIcons>
+          <SocialLink
+            href="https://www.linkedin.com/in/william-wallace-4b7348237/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Abrir LinkedIn"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </SocialLink>
+          <SocialLink
+            href="https://github.com/williamwallace076"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Abrir GitHub"
+          >
+            <FontAwesomeIcon icon={faGithub} size="lg" />
+          </SocialLink>
+        </SocialIcons>
+      </HeaderArea>
+    </HeaderShell>
+  );
+};
+
 export default Header;

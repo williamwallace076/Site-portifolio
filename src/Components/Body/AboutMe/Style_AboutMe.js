@@ -1,426 +1,217 @@
-import styles from "styled-components"
+import styled, { keyframes } from "styled-components";
 
-export const AboutMeSection = styles.section`
+const infiniteScroll = keyframes`
+  from {
+    transform: translateX(0);
+  }
 
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+`;
+
+export const AboutMeSection = styled.section`
+  width: min(1600px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media screen and (max-width: 480px) {
+    width: min(1600px, calc(100% - 1rem));
+  }
+`;
+
+export const AboutGrid = styled.div`
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 1.5rem;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const AboutText = styled.div`
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 2rem;
+  background: linear-gradient(180deg, rgba(10, 18, 38, 0.92) 0%, rgba(6, 11, 24, 0.88) 100%);
+  border: 1px solid rgba(123, 151, 255, 0.12);
+
+  h2 {
+    margin: 0 0 1rem;
+    max-width: 12ch;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  @media screen and (max-width: 520px) {
+    border-radius: 1.5rem;
+
+    h2 {
+      max-width: none;
+    }
+  }
+`;
+
+export const SectionTag = styled.span`
+  display: inline-flex;
+  margin-bottom: 1.25rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(62, 115, 255, 0.12);
+  color: var(--accent-soft);
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+`;
+
+export const SectionLead = styled.p`
+  max-width: 35rem;
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.8;
+`;
+
+export const HighlightList = styled.div`
+  display: grid;
+  gap: 1rem;
+`;
+
+export const HighlightCard = styled.article`
+  padding: clamp(1.15rem, 2vw, 1.5rem);
+  border-radius: 1.6rem;
+  border: 1px solid rgba(123, 151, 255, 0.12);
+  background:
+    radial-gradient(circle at top right, rgba(62, 115, 255, 0.12), transparent 35%),
+    rgba(7, 12, 24, 0.88);
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+
+  svg {
+    margin-top: 0.2rem;
+    color: var(--accent);
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    margin: 0 0 0.45rem;
+    color: var(--text-primary);
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: clamp(1rem, 1.4vw, 1.08rem);
+    line-height: 1.7;
+  }
+
+  @media screen and (max-width: 420px) {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+`;
+
+export const TimelineViewport = styled.div`
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: clamp(1.5rem, 7vw, 5rem);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(4, 9, 19, 1) 0%, rgba(4, 9, 19, 0) 100%);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(4, 9, 19, 1) 0%, rgba(4, 9, 19, 0) 100%);
+  }
+`;
+
+export const Timeline = styled.div`
+  overflow: hidden;
+`;
+
+export const TimelineTrack = styled.div`
+  width: max-content;
+  display: flex;
+  gap: 1rem;
+  animation: ${infiniteScroll} 34s linear infinite;
+  will-change: transform;
+
+  ${TimelineViewport}:hover & {
+    animation-play-state: paused;
+  }
+`;
+
+export const TimelineCard = styled.article`
+  position: relative;
+  flex: 0 0 22rem;
+  min-height: 16rem;
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  border-radius: 1.7rem;
+  border: 1px solid rgba(123, 151, 255, 0.1);
+  background: rgba(5, 9, 18, 0.86);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: auto auto 0 0;
     width: 100%;
-    height: max-content;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--theme-color--gray);
-
-    font-family: var(--theme-font-Poppins);
-
-    @media screen and (max-width: 768px){
-
-        height: 150vh;
-        
-    }
-
-    @media screen and (max-width: 600px){
-
-        height: max-content;
-        margin-bottom: 1rem;
-    }
-
-
-`
-
-export const AboutMeArea = styles.div`
-
-    width: 100%;
-    height:50%;
-
-    margin-top: 4rem;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-
-    @media screen and (max-width: 768px){
-        margin-top: 2rem;
-        justify-content: center;
-    }
-
-    @media screen and (max-width: 600px){
-
-       flex-direction: column ;
-       margin-top: 6rem;
-       
-    }
-
-`
-
-export const AboutMeImgArea = styles.div`
-
-width: 25rem;
-height: max-content;
-display: flex;
-flex-direction : row;
-align-items: center;
-justify-content : center;
-position: relative;
-
-
-@media screen and (max-width: 768px){
-
-    margin-left: -3rem;
-
-}
-
-@media screen and (max-width: 600px){
-
-    flex-direction: column ;
-    width: max-content;
-    margin-bottom: 1rem;
- }
-
-` 
-export const AboutMeImg = styles.img`
-
-width: 15rem;
-height: 20rem;
-margin-left : 5rem;
-margin-top : -3rem;
-border-radius: 3px;
-box-shadow: -11px 6px 18px -7px rgba(0,0,0,1);
-z-index: 5;
-background-size: cover;
-
-@media screen and (max-width: 600px){
-
-    width: 11rem;
-    height: 15rem;
-
- }
-
-
-` 
-export const AboutMeImgBorder = styles.div`
-
-width: 15rem;
-height: 20rem;
-border-radius: 3px;
-border: 6px solid var(--theme-color--red);
-position: absolute;
-box-shadow: -11px 14px 54px 1px rgba(226,70,102,0.7);
-
-
-@media screen and (max-width: 600px){
-
-    width: 11rem;
-    height: 15rem;
-
- }
-
-
-` 
-
-
-
-export const SkilsArea = styles.div`
-
-    width: 40%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: space-around;
-
-    padding-left: 3rem;
-    box-sizing: border-box;
-
-    h2{
-        font-size: 1.8rem;
-        margin-bottom: 0;
-        margin-top: -2rem;
-    }
-    h3{
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-
-    @media screen and (max-width: 768px){
-
-        align-items: center;
-
-        h2{
-            font-size: 2rem;
-            margin-top: 2rem;
-        }
-        h3{
-            font-size: 1.5rem;
-        }
-
-    }
-
-    @media screen and (max-width: 600px){
-
-        width:70%;
-        h2{ 
-        font-size:2.2rem;
-        }
-        h3{
-        font-size: 1.7rem;
-        }
-    }
-
-
-` 
-export const SkilsParagrafsArea = styles.div`
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-
-    @media screen and (max-width: 768px){
-
-      p{
-        font-size: 0.8rem;
-      }
-
-    }
-
-` 
-
-export const ParagrafhSkils = styles.div`
-
-    width :100%;
-    height: max-content;
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-
-    gap: 1rem;
-
-    @media screen and (max-width: 768px){
-
-        margin-top: -1rem;
-        
-    }
-
-
-`
-
-export const TempLineArea = styles.div`
-
-    width: 100%;
-    height: 40%;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    padding: 2rem 0rem ;
-    gap: 3rem;
-    box-sizing: border-box;
-
-    :not(:first-child){
-        margin-left: -1px;
-    }
-
-    .cicle-area{
-        width: max-content;
-        height:max-content;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .cicle{
-        background-color: transparent;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        border: 10px solid var(--theme-color--red);
-        box-sizing: border-box;
-    
-    }
-
-    .cicle-line{
-        width: 20rem;
-        height: 5px;
-        border:none;
-        margin-left: -1px;
-        background-color: var(--theme-color--red);
-    }
-
-    @media screen and (max-width: 768px){
-
-        width: 80%;
-        height: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        flex-direction: row;
-        gap: 0;
-        padding: 0 ;
-
-        :not(:first-child){
-            margin-left: 0;
-        }
-
-        .cicle-area{
-            width: 2rem;
-            flex-direction: column;
-            
-        }
-        
-        .cicle{
-            width: 1.5rem;
-            height: 1.5rem;
-            border: 7px solid var(--theme-color--red);
-        }
-
-        .cicle-line{
-            width: 5px; 
-            margin-left: 0;
-        }
-
-    }
-
-
-`
-export const Templine = styles.div`
-    
-    display:flex;
-    flex-direction: row;
-
-    @media screen and (max-width: 768px){
-
-    flex-direction: column;
-    width: min-content;
-    
-    :first-child{
-        .cicle-line{
-
-            height: 10rem;
-
-        }
-    }
-    :nth-child(2){
-
-        .cicle-line{
-
-            height: 8rem;
-
-        }
-    }
-    :nth-child(3){
-
-        .cicle-line{
-
-            height: 5rem;
-
-        }
-    }
-
-    @media screen and (max-width: 600px){
-
-        margin-right: 1rem;
-
-        :first-child{
-            .cicle-line{
-    
-                height: 12rem;
-    
-            }
-        }
-        :nth-child(2){
-    
-            .cicle-line{
-    
-                height: 9rem;
-    
-            }
-        }
-        :nth-child(3){
-    
-            .cicle-line{
-    
-                height: 7rem;
-    
-            }
-        }
-    }
-
-`
-
-export const TemplineInfoArea = styles.div`
-
-    width: 100%;
-    height: max-content;
-    display:flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content:center;
-    gap: 5rem;
-
-    :first-child{
-        margin-right: 2rem;
-    }
-
-    
-    @media screen and (max-width: 768px){
-        gap: 0;
-        flex-direction: column;
-
-        :first-child{
-            margin-right: 0;
-        }
-    }
-
-
-`
-export const TemplineInfoItem = styles.div`
-
-    margin-top: -3rem;
-    margin-left: -3rem;
-    width: 15rem;
-    height: max-content;
-    display:flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content:space-between;
-
-    h2{
-        margin-bottom: 0;
-    }
-
-    p{
-        font-size: 0.95rem;
-    }
-    
-    @media screen and (max-width: 768px){
-
-        margin-top: 1rem;
-        width: 25rem;
-        height: max-content;
-        margin-left: 0rem;
-
-        h2{
-            margin-top: 0;
-        }
-
-        p{
-            font-size: 0.85rem;
-        }
-    }
-
-
-    @media screen and (max-width: 600px){
-
-        width: 16rem;
-
-    }
-`
-
+    height: 3px;
+    background: linear-gradient(90deg, rgba(62, 115, 255, 0.82), transparent);
+  }
+
+  h3 {
+    margin: 0 0 0.8rem;
+    color: var(--text-primary);
+    font-size: 1.04rem;
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-basis: 19rem;
+    min-height: 17rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    flex-basis: min(16.5rem, calc(100vw - 2.5rem));
+    min-height: 18rem;
+  }
+
+  @media screen and (max-width: 340px) {
+    flex-basis: min(15.5rem, calc(100vw - 1.5rem));
+  }
+`;
+
+export const TimelineYear = styled.span`
+  display: inline-flex;
+  margin-bottom: 1rem;
+  color: var(--accent-soft);
+  font-size: 0.92rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+`;

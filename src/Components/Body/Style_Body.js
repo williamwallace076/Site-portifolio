@@ -1,12 +1,8 @@
-import styles from "styled-components";
+import styled from "styled-components";
 
-export const BodyArea = styles.div`
-
-    width : 100%;
-    height : max-content;
-    background-color: var(--theme-color--gray);
-    
-    display: flex;
-    flex-direction: column;
-
-`
+export const BodyArea = styled.main`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;

@@ -1,164 +1,109 @@
-import styles from 'styled-components';
+import styled from "styled-components";
 
+export const ContactMeSection = styled.section`
+  width: min(1600px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0 5rem;
 
-export const ContactMeSection = styles.section`
+  @media screen and (max-width: 480px) {
+    width: min(1600px, calc(100% - 1rem));
+  }
+`;
 
-    width: 100%;
-    height: 100vh;
+export const ContactArea = styled.div`
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 1.2rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
-    font-family: var(--theme-font-Poppins);
-    
+export const ContactInfoArea = styled.div`
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border-radius: 2rem;
+  border: 1px solid rgba(123, 151, 255, 0.12);
+  background:
+    radial-gradient(circle at top left, rgba(62, 115, 255, 0.14), transparent 34%),
+    rgba(6, 11, 23, 0.9);
 
-    h2{
-        margin: 2rem;
-    }
+  @media screen and (max-width: 520px) {
+    border-radius: 1.5rem;
+  }
+`;
 
-    @media screen and (max-width: 768px){
+export const ContactInfoAreaHeader = styled.div`
+  max-width: 30rem;
 
-        height: 90vh; 
+  h2 {
+    margin: 0 0 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
 
-        h2{
-            margin: 2rem 0 0 0;
-        }
+  p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+`;
 
-    }
+export const SectionTag = styled.span`
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(62, 115, 255, 0.12);
+  color: var(--accent-soft);
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+`;
 
-    @media screen and (max-width: 600px){
+export const ContactInfo = styled.div`
+  margin-top: 2rem;
+`;
 
-        height: max-content;
-        text-align: center;
+export const ContactList = styled.div`
+  display: grid;
+  gap: 1rem;
+`;
 
-        h2{
-            font-size: 2rem;
-        }
+export const ItemContactList = styled.div`
+  padding: 1rem 1.1rem;
+  border-radius: 1.35rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(123, 151, 255, 0.08);
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: 1rem;
+  align-items: start;
 
-    }
+  svg {
+    margin-top: 0.25rem;
+    color: var(--accent);
+  }
 
-`
+  @media screen and (max-width: 360px) {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+`;
 
-export const ContactArea = styles.div`
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
+export const ItemContactInfo = styled.div`
+  h3 {
+    margin: 0 0 0.3rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
 
-    height: max-content;
-
-    display: flex;
-    flex-direction: row;
-
-    @media screen and (max-width: 768px){
-
-        width: 90%;
-
-        margin-top: 2rem;
-
-        gap: 1rem;
-    }
-
-    @media screen and (max-width: 600px){
-    
-    flex-direction: column;
-    margin-bottom : 2rem;
-    margin-top: 1rem;
-    align-items: center;
-
-    }
-
-`
-
-export const ContactInfoArea = styles.div`
-
-    width: 30%;
-    height: 30rem;
-
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-
-    h3{
-        font-size: 1.5rem;
-        margin-bottom: 0;
-    }
-    p{
-        font-size: 0.8rem;
-    }
-
-    @media screen and (max-width: 768px){
-
-        width: 60%;
-        height: max-content;
-
-        h3{
-            font-size: 1.4rem;
-        }
-    }
-    @media screen and (max-width: 600px){
-
-        width: 90%;
-    }
-`
-export const ContactInfo = styles.div`
-
-    width: 100%;
-    height: max-content;
-
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-
-
-`
-export const ContactList = styles.div`
-
-    width: 100%;
-    height: max-content;
-
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-
-`
-export const ItemContactList = styles.div`
-
-    width: 100%;
-    height: 4rem;
-
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    gap: 1rem;
-
-    svg{
-        font-size: 2rem;
-    }
-
-
-`
-
-export const ItemContactInfo = styles.div`
-
-    width: 70%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    padding-top: 0.7rem;
-    box-sizing: border-box;
-
-    h4,p{
-        margin: 0;
-    }
-
-
-`
-
+  p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+`;
