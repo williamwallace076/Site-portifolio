@@ -8,7 +8,6 @@ import {
   ContactTextLink,
   ItemContactInfo,
   ItemContactList,
-  SectionTag,
 } from "./Styled_ContactMe";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen, faMap, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -22,7 +21,6 @@ const ContactMe = () => {
       <ContactArea>
         <ContactInfoArea>
           <ContactInfoAreaHeader>
-            <SectionTag>Contato</SectionTag>
             <h2>Se você tem um projeto em mente, pode falar comigo por aqui.</h2>
             <p>
               Seja para criar uma landing page, evoluir um site ou estruturar uma solução web mais completa, este é o

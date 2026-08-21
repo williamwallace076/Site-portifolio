@@ -52,18 +52,6 @@ export const ContactInfoAreaHeader = styled.div`
   }
 `;
 
-export const SectionTag = styled.span`
-  display: inline-flex;
-  margin-bottom: 1rem;
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(62, 115, 255, 0.12);
-  color: var(--accent-soft);
-  text-transform: uppercase;
-  font-size: 0.76rem;
-  letter-spacing: 0.14em;
-`;
-
 export const ContactInfo = styled.div`
   margin-top: 2rem;
 `;

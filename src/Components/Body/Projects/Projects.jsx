@@ -14,7 +14,6 @@ import {
   ProjectTechItem,
   ProjectsSection,
   SectionLead,
-  SectionTag,
 } from "./Style_Projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RevealOnScroll from "../../Common/RevealOnScroll";
@@ -24,8 +23,7 @@ const Projects = () => {
   return (
     <ProjectsSection id="projects">
       <ProjectHeader>
-        <SectionTag>Nossos projetos</SectionTag>
-        <h2>Nossos clientes e projetos.</h2>
+        <h2>Clientes e projetos</h2>
         <SectionLead>
           Aqui você pode ver de perto como cada projeto foi construído para fortalecer a presença digital de uma marca.
         </SectionLead>

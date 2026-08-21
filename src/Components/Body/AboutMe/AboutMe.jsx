@@ -5,7 +5,6 @@ import {
   HighlightCard,
   HighlightList,
   SectionLead,
-  SectionTag,
   Timeline,
   TimelineCard,
   TimelineTrack,
@@ -24,7 +23,6 @@ const AboutMe = () => {
     <AboutMeSection id="about">
       <AboutGrid>
         <AboutText>
-          <SectionTag>Sobre mim</SectionTag>
           <h2>
             Hoje eu desenvolvo soluções web com uma base fullstack, unindo interface, estrutura e integração em uma
             mesma entrega.
