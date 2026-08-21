@@ -169,14 +169,36 @@ export const TimelineTrack = styled.div`
   animation: ${infiniteScroll} 34s linear infinite;
   will-change: transform;
 
+  > .reveal-on-scroll {
+    flex: 0 0 22rem;
+  }
+
   ${TimelineViewport}:hover & {
     animation-play-state: paused;
+  }
+
+  @media screen and (max-width: 768px) {
+    > .reveal-on-scroll {
+      flex-basis: 19rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    > .reveal-on-scroll {
+      flex-basis: min(16.5rem, calc(100vw - 2.5rem));
+    }
+  }
+
+  @media screen and (max-width: 340px) {
+    > .reveal-on-scroll {
+      flex-basis: min(15.5rem, calc(100vw - 1.5rem));
+    }
   }
 `;
 
 export const TimelineCard = styled.article`
   position: relative;
-  flex: 0 0 22rem;
+  width: 100%;
   min-height: 16rem;
   padding: clamp(1.1rem, 2vw, 1.5rem);
   border-radius: 1.7rem;
@@ -206,17 +228,11 @@ export const TimelineCard = styled.article`
   }
 
   @media screen and (max-width: 768px) {
-    flex-basis: 19rem;
     min-height: 17rem;
   }
 
   @media screen and (max-width: 480px) {
-    flex-basis: min(16.5rem, calc(100vw - 2.5rem));
     min-height: 18rem;
-  }
-
-  @media screen and (max-width: 340px) {
-    flex-basis: min(15.5rem, calc(100vw - 1.5rem));
   }
 `;
 
