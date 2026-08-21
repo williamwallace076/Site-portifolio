@@ -107,3 +107,14 @@ export const ItemContactInfo = styled.div`
     line-height: 1.65;
   }
 `;
+
+export const ContactTextLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+`;

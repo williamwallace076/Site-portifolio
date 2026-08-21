@@ -27,6 +27,7 @@ export const AboutGrid = styled.div`
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 1.5rem;
+  align-items: stretch;
 
   @media screen and (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -79,10 +80,21 @@ export const SectionLead = styled.p`
 
 export const HighlightList = styled.div`
   display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  min-height: 100%;
+
+  .reveal-on-scroll {
+    height: 100%;
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-rows: none;
+  }
 `;
 
 export const HighlightCard = styled.article`
+  height: 100%;
   padding: clamp(1.15rem, 2vw, 1.5rem);
   border-radius: 1.6rem;
   border: 1px solid rgba(123, 151, 255, 0.12);
@@ -92,6 +104,7 @@ export const HighlightCard = styled.article`
   display: grid;
   grid-template-columns: 3rem 1fr;
   gap: 1rem;
+  align-content: center;
 
   svg {
     margin-top: 0.2rem;

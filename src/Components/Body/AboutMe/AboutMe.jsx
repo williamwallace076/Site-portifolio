@@ -14,6 +14,7 @@ import {
 } from "./Style_AboutMe";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import RevealOnScroll from "../../Common/RevealOnScroll";
 import { aboutHighlights, careerTimeline } from "../../../data/siteContent";
 
 const AboutMe = () => {
@@ -24,7 +25,10 @@ const AboutMe = () => {
       <AboutGrid>
         <AboutText>
           <SectionTag>Sobre mim</SectionTag>
-          <h2>Hoje eu desenvolvo soluções web com uma base fullstack, unindo interface, estrutura e integração em uma mesma entrega.</h2>
+          <h2>
+            Hoje eu desenvolvo soluções web com uma base fullstack, unindo interface, estrutura e integração em uma
+            mesma entrega.
+          </h2>
           <SectionLead>
             Minha trajetória começou com lógica de programação ainda no ensino médio e foi evoluindo para o
             desenvolvimento web, projetos pessoais, formação técnica e graduação em tecnologia. Com o tempo, fui
@@ -34,14 +38,21 @@ const AboutMe = () => {
         </AboutText>
 
         <HighlightList>
-          {aboutHighlights.map((item) => (
-            <HighlightCard key={item.title}>
-              <FontAwesomeIcon icon={item.icon} />
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            </HighlightCard>
+          {aboutHighlights.map((item, index) => (
+            <RevealOnScroll
+              key={item.title}
+              delay={index * 110}
+              threshold={0.22}
+              rootMargin="0px 0px -14% 0px"
+            >
+              <HighlightCard>
+                <FontAwesomeIcon icon={item.icon} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </HighlightCard>
+            </RevealOnScroll>
           ))}
         </HighlightList>
       </AboutGrid>
@@ -50,11 +61,18 @@ const AboutMe = () => {
         <Timeline>
           <TimelineTrack>
             {timelineLoop.map((item, index) => (
-              <TimelineCard key={`${item.year}-${index}`}>
-                <TimelineYear>{item.year}</TimelineYear>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </TimelineCard>
+              <RevealOnScroll
+                key={`${item.year}-${index}`}
+                delay={(index % careerTimeline.length) * 90}
+                threshold={0.22}
+                rootMargin="0px 0px -14% 0px"
+              >
+                <TimelineCard>
+                  <TimelineYear>{item.year}</TimelineYear>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </TimelineCard>
+              </RevealOnScroll>
             ))}
           </TimelineTrack>
         </Timeline>

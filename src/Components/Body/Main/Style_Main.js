@@ -135,6 +135,7 @@ const ButtonBase = styled.a`
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
   &:hover {
@@ -295,6 +296,7 @@ export const ScrollCue = styled.a`
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 0.78rem;
+  cursor: pointer;
 
   @media screen and (max-width: 900px) {
     display: none;

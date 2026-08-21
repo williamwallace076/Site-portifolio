@@ -17,6 +17,7 @@ import {
   SectionTag,
 } from "./Style_Projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import RevealOnScroll from "../../Common/RevealOnScroll";
 import { realProjects } from "../../../data/siteContent";
 
 const Projects = () => {
@@ -31,52 +32,59 @@ const Projects = () => {
       </ProjectHeader>
 
       <ProjectList>
-        {realProjects.map((project) => (
-          <ProjectFeature key={project.title}>
-            {project.preview ? (
-              <ProjectPreview src={project.preview} alt={`Preview do projeto ${project.title}`} />
-            ) : (
-              <ProjectPreviewEmpty>
-                <span>{project.previewLabel}</span>
-              </ProjectPreviewEmpty>
-            )}
+        {realProjects.map((project, index) => (
+          <RevealOnScroll
+            key={project.title}
+            delay={index * 120}
+            threshold={0.22}
+            rootMargin="0px 0px -14% 0px"
+          >
+            <ProjectFeature>
+              {project.preview ? (
+                <ProjectPreview src={project.preview} alt={`Preview do projeto ${project.title}`} />
+              ) : (
+                <ProjectPreviewEmpty>
+                  <span>{project.previewLabel}</span>
+                </ProjectPreviewEmpty>
+              )}
 
-            <ProjectContent>
-              <ProjectBadge>{project.badge}</ProjectBadge>
-              <h3>{project.title}</h3>
-              <p>{project.subtitle}</p>
-              <ProjectDescription>{project.description}</ProjectDescription>
+              <ProjectContent>
+                <ProjectBadge>{project.badge}</ProjectBadge>
+                <h3>{project.title}</h3>
+                <p>{project.subtitle}</p>
+                <ProjectDescription>{project.description}</ProjectDescription>
 
-              <ProjectStats>
-                {project.stats.map((item) => (
-                  <ProjectStat key={item.label}>
-                    <FontAwesomeIcon icon={item.icon} />
-                    <span>{item.label}</span>
-                  </ProjectStat>
-                ))}
-              </ProjectStats>
+                <ProjectStats>
+                  {project.stats.map((item) => (
+                    <ProjectStat key={item.label}>
+                      <FontAwesomeIcon icon={item.icon} />
+                      <span>{item.label}</span>
+                    </ProjectStat>
+                  ))}
+                </ProjectStats>
 
-              <ProjectTech>
-                {project.technologies.map((item) => (
-                  <ProjectTechItem key={item.name}>
-                    <FontAwesomeIcon icon={item.icon} />
-                    <span>{item.name}</span>
-                  </ProjectTechItem>
-                ))}
-              </ProjectTech>
+                <ProjectTech>
+                  {project.technologies.map((item) => (
+                    <ProjectTechItem key={item.name}>
+                      <FontAwesomeIcon icon={item.icon} />
+                      <span>{item.name}</span>
+                    </ProjectTechItem>
+                  ))}
+                </ProjectTech>
 
-              <ProjectActions>
-                <a href={project.primaryAction.url} target="_blank" rel="noreferrer">
-                  {project.primaryAction.label}
-                </a>
-                {project.secondaryAction ? (
-                  <a href={project.secondaryAction.url} target="_blank" rel="noreferrer">
-                    {project.secondaryAction.label}
+                <ProjectActions>
+                  <a href={project.primaryAction.url} target="_blank" rel="noreferrer">
+                    {project.primaryAction.label}
                   </a>
-                ) : null}
-              </ProjectActions>
-            </ProjectContent>
-          </ProjectFeature>
+                  {project.secondaryAction ? (
+                    <a href={project.secondaryAction.url} target="_blank" rel="noreferrer">
+                      {project.secondaryAction.label}
+                    </a>
+                  ) : null}
+                </ProjectActions>
+              </ProjectContent>
+            </ProjectFeature>
+          </RevealOnScroll>
         ))}
       </ProjectList>
     </ProjectsSection>

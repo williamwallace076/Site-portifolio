@@ -204,12 +204,18 @@ export const ProjectActions = styled.div`
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
   }
 
   a:first-child {
     color: #f6f9ff;
     background: linear-gradient(135deg, #3e73ff 0%, #1f4dd8 100%);
+
+    &:hover {
+      background: linear-gradient(135deg, #4d88ff 0%, #2463ff 100%);
+      box-shadow: 0 18px 36px rgba(37, 99, 255, 0.34);
+    }
   }
 
   a:last-child {

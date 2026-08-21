@@ -53,6 +53,7 @@ export const FooterLink = styled.a`
   color: var(--text-secondary);
   display: grid;
   place-items: center;
+  cursor: pointer;
   transition: transform 0.25s ease, color 0.25s ease;
 
   &:hover {

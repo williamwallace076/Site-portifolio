@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import RevealOnScroll from "../../Common/RevealOnScroll";
 import {
   ActionGroup,
   Cursor,
@@ -52,8 +53,8 @@ const Main = () => {
           <Highlight>Desenvolvedor Fullstack</Highlight> criando soluções web completas.
         </h1>
         <HeroDescription>
-          Se você quer tirar uma ideia do papel, melhorar a presença digital da sua marca ou construir uma solução
-          web mais completa, aqui você pode ver como eu penso interface, estrutura e entrega.
+          Se você quer tirar uma ideia do papel, melhorar a presença digital da sua marca ou construir uma solução web
+          mais completa, aqui você pode ver como eu penso interface, estrutura e entrega.
         </HeroDescription>
 
         <ActionGroup>
@@ -81,11 +82,13 @@ const Main = () => {
         </StackRow>
       </HeroContent>
 
-      <VisualColumn>
-        <ProfileOrb>
-          <ProfileImage src={imgProfile} alt="Foto de perfil de William Wallace" />
-        </ProfileOrb>
-      </VisualColumn>
+      <RevealOnScroll delay={120} threshold={0.22} rootMargin="0px 0px -14% 0px">
+        <VisualColumn>
+          <ProfileOrb>
+            <ProfileImage src={imgProfile} alt="Foto de perfil de William Wallace" />
+          </ProfileOrb>
+        </VisualColumn>
+      </RevealOnScroll>
 
       <ScrollCue href="#about">Explorar</ScrollCue>
     </HeroSection>

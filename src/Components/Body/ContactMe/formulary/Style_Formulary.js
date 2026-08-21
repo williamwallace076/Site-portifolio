@@ -48,6 +48,22 @@ const fieldStyle = `
     border-color: rgba(78, 126, 255, 0.68);
     box-shadow: 0 0 0 4px rgba(62, 115, 255, 0.12);
   }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--text-primary);
+    caret-color: var(--text-primary);
+    border: 1px solid rgba(123, 151, 255, 0.1);
+    -webkit-box-shadow:
+      0 0 0 1000px rgba(11, 18, 34, 1) inset,
+      0 0 0 0 transparent;
+    box-shadow:
+      0 0 0 1000px rgba(11, 18, 34, 1) inset,
+      0 0 0 0 transparent;
+    transition: background-color 9999s ease-out 0s;
+  }
 `;
 
 export const InputItem = styled.input`

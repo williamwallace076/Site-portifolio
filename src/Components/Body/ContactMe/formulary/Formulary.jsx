@@ -19,7 +19,7 @@ const initialFormState = {
 
 const Formulary = () => {
   const [formData, setFormData] = useState(initialFormState);
-  const [statusMessage, setStatusMessage] = useState("O formulário abre seu app de e-mail com a mensagem pronta.");
+  const [statusMessage, setStatusMessage] = useState("O formulário abre um rascunho no Gmail com a mensagem pronta.");
 
   const handleChange = ({ target }) => {
     setFormData((current) => ({
@@ -31,20 +31,22 @@ const Formulary = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const fullName = `${formData.firstName} ${formData.lastName}`.trim();
     const composedSubject = formData.subject || "Contato pelo portfólio";
     const body = [
-      `Nome: ${formData.firstName} ${formData.lastName}`.trim(),
+      `Nome: ${fullName}`,
       `Email: ${formData.email}`,
       "",
+      "Mensagem:",
       formData.message,
     ].join("\n");
 
-    const mailtoUrl = `mailto:wallacewilliam076@gmail.com?subject=${encodeURIComponent(
-      composedSubject
-    )}&body=${encodeURIComponent(body)}`;
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      "wallacewilliam076@gmail.com"
+    )}&su=${encodeURIComponent(composedSubject)}&body=${encodeURIComponent(body)}`;
 
-    setStatusMessage("Abrindo seu app de e-mail para finalizar o envio.");
-    window.location.href = mailtoUrl;
+    setStatusMessage("Abrindo o Gmail com seu e-mail já preenchido.");
+    window.open(gmailComposeUrl, "_blank", "noopener,noreferrer");
   };
 
   return (

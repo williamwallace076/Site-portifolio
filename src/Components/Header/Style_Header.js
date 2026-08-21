@@ -49,6 +49,7 @@ export const Brand = styled.a`
   gap: 0.55rem;
   color: var(--text-primary);
   text-decoration: none;
+  cursor: pointer;
 
   strong {
     display: block;
@@ -100,6 +101,7 @@ export const NavLink = styled.a`
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.92rem;
+  cursor: pointer;
   transition: color 0.25s ease, transform 0.25s ease;
 
   &:hover {
@@ -123,6 +125,7 @@ export const SocialLink = styled.a`
   place-items: center;
   color: var(--text-secondary);
   background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
   transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 
   &:hover {
